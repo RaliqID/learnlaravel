@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Public Profile - LaraNews</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background dark:bg-background border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-stack-lg">
+<a class="font-display text-article-title-sm font-semibold text-primary dark:text-primary" href="#">LaraNews</a>
+<div class="hidden md:flex items-center gap-stack-md ml-stack-lg">
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70" href="#">Home</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70" href="#">Topics</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70" href="#">Discovery</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="text-primary dark:text-primary hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-primary dark:text-primary hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-16 bottom-0 w-64 pt-stack-lg bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant flat no shadows z-40">
+<div class="px-stack-lg mb-stack-lg flex items-center gap-stack-md">
+<img alt="User Profile" class="w-10 h-10 object-cover" data-alt="A small circular avatar placeholder image for the community section header in a dark, premium UI, subtle lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-nNsAU1MyKZuUidFF_LItKfS4dOR8fKt0zI_AuHSnU9lD1FqXvNWSJTKz18CVvHdDaVs4HgW275aquE9ZFEEI4Jjz97NZI7u126ClkeCbCLWd4zCP-3lHjzn3rRpSya2qR0bsPOMgMYVCRUkBpfeJK18TEbe80MdPUbsmIKMcluOF8EFStho5SRyaxhNEVlWEV7cNTyKqc9nAicuv-hu0aTQ5R7A09NXYaFlDKgmWs3u2JE7ncrsx">
+<div>
+<div class="font-label text-label text-primary">Communities</div>
+<div class="font-metadata text-metadata text-on-surface-variant">Explore Topics</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-stack-md flex flex-col gap-1">
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors hover:text-primary transition-all cursor-pointer scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+                New
+            </a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors hover:text-primary transition-all cursor-pointer scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_fire_department">local_fire_department</span>
+                Hot
+            </a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors hover:text-primary transition-all cursor-pointer scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="trending_up">trending_up</span>
+                Top
+            </a>
+</div>
+<div class="mt-auto px-stack-md pb-stack-lg flex flex-col gap-1 border-t border-outline-variant pt-stack-md">
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors hover:text-primary transition-all cursor-pointer scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-stack-md px-stack-md py-stack-sm rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors hover:text-primary transition-all cursor-pointer scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+                Help
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-24 pb-section-gap px-margin-mobile md:px-margin-tablet lg:ml-64 lg:px-margin-desktop min-h-screen">
+<!-- Profile Header - Floating Layout -->
+<header class="mb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="col-span-1 md:col-span-8 flex flex-col md:flex-row gap-content-gap items-start md:items-end">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 relative group">
+<img class="w-full h-full object-cover" data-alt="A highly detailed, professional headshot of a distinguished individual against a stark, minimalist dark background, high-contrast studio lighting, premium editorial portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpsPdxO5jyWZtjfZMdDbVW56FeeVjzPE1YnXRDHhIJjjyEoe58LdncSVhVN9jUEVPUUdYqlqC4Q8_Oxcyu6IwGg3g3dUrD1KbPuVtd2w3UMTT6mfVAxxU9yO7SvyasZvspTZNHhXmH8vSTtG_XPQ3IzuQjo1p7uz9D3UZ-atWH0x1URyjNbHFrivuzwYVJCHGdzusEA5Q8-k63O-XVCA-f-VgI7mCLUoBqks5cYGROF8WVPvV9uTTF">
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-stack-md">
+<span class="font-metadata text-metadata text-primary bg-surface-container-high px-2 py-1">Author</span>
+<span class="font-metadata text-metadata text-on-surface-variant">Joined 2021</span>
+</div>
+<h1 class="font-display text-page-title-mobile md:text-page-title text-on-surface m-0 leading-none">Elena Rostova</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mt-stack-sm">
+                        Tech correspondent and cultural critic. Writing about the intersection of human behavior and emerging systems. Former editor at large.
+                    </p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 flex md:justify-end items-end h-full pt-stack-lg md:pt-0">
+<button class="w-full md:w-auto bg-primary text-on-primary font-label text-label px-8 py-3 hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="person_add" data-weight="fill">person_add</span>
+                    Follow
+                </button>
+</div>
+</header>
+<!-- Content Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-content-gap">
+<!-- Left Column: Posts -->
+<div class="lg:col-span-8 flex flex-col gap-content-gap">
+<div class="border-b border-outline-variant pb-stack-md mb-stack-md flex gap-stack-lg">
+<button class="font-label text-label text-primary border-b-2 border-primary pb-stack-md -mb-[17px]">Recent Posts</button>
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors pb-stack-md">Top Editorials</button>
+</div>
+<!-- Post Item 1 -->
+<article class="group cursor-pointer">
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider">Technology</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">Oct 12, 2023</span>
+</div>
+<h2 class="font-article-title-mobile md:font-article-title-lg text-on-surface group-hover:text-primary transition-colors mb-stack-md">The Silence of the New Machines</h2>
+<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-3">
+                        As generative interfaces become increasingly invisible, we are losing the tangible friction that once helped us understand how our tools actually function. A deep dive into the frictionless void.
+                    </p>
+<div class="flex gap-stack-md">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant font-metadata text-metadata">Design</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant font-metadata text-metadata">AI</span>
+</div>
+</article>
+<div class="w-full h-px bg-outline-variant"></div>
+<!-- Post Item 2 -->
+<article class="group cursor-pointer">
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider">Culture</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">Sep 28, 2023</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-3">
+<h2 class="font-article-title-mobile md:font-article-title-sm text-on-surface group-hover:text-primary transition-colors mb-stack-md">The Future of Asynchronous Systems</h2>
+<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-2">Exploring how distributed architectures are evolving to handle the next generation of real-time data processing and user interaction.</p>
+<div class="flex gap-stack-md">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant font-metadata text-metadata">Society</span>
+</div>
+</div>
+<div class="md:col-span-1 hidden md:block">
+<img class="w-full aspect-square object-cover grayscale opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A stark, minimalist architectural photograph showing harsh geometric concrete lines against a deep dark background, high contrast, conceptual art piece style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjaJZ_r6swYYm8seuYLRdW0O_f-je-a_TW1pjIWHBRHFHfFeePInJpx7mF143iDmJVIbbEWzofIcsZKFSCPOC3EaNbdZTitEvrt8JSIyKHbETchUlEYjwZg_TZho-G6zbQDJCPtmmpSrJn3ul66IMXHlFLYPIaNh0VE6-Khc3Yxgie4nCY3OnT9vA_BZ5YpLOXTwNJIE9l6lwW-E2VtaVqr9cUBeeUGMA9UuRz0TvZWtLQkkImn2C8">
+</div>
+</div>
+</article>
+<div class="w-full h-px bg-outline-variant"></div>
+<div class="text-center pt-stack-lg">
+<button class="font-label text-label text-primary border border-outline-variant px-6 py-2 hover:bg-surface-container transition-colors">Load More Articles</button>
+</div>
+</div>
+<!-- Right Column: Meta & Comments -->
+<div class="lg:col-span-4 flex flex-col gap-content-gap">
+<!-- Stats Bento -->
+<div class="grid grid-cols-2 gap-px bg-outline-variant">
+<div class="bg-surface-container-low p-stack-lg flex flex-col gap-stack-sm">
+<span class="font-display text-[32px] leading-none text-primary">142</span>
+<span class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider">Published</span>
+</div>
+<div class="bg-surface-container-low p-stack-lg flex flex-col gap-stack-sm">
+<span class="font-display text-[32px] leading-none text-primary">12k</span>
+<span class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider">Followers</span>
+</div>
+<div class="bg-surface-container-low p-stack-lg flex flex-col gap-stack-sm col-span-2">
+<span class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider mb-stack-sm">Focus Areas</span>
+<div class="flex flex-wrap gap-2">
+<span class="text-on-surface font-label text-label">Technology,</span>
+<span class="text-on-surface font-label text-label">Design Systems,</span>
+<span class="text-on-surface font-label text-label">Digital Culture</span>
+</div>
+</div>
+</div>
+<!-- Recent Activity/Comments -->
+<div>
+<h3 class="font-section-title text-section-title text-on-surface mb-stack-lg">Recent Activity</h3>
+<div class="flex flex-col gap-stack-lg relative before:absolute before:inset-y-0 before:left-[11px] before:w-px before:bg-outline-variant">
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 bg-surface-container-high rounded-full flex items-center justify-center z-10 outline outline-4 outline-background">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="chat_bubble">chat_bubble</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic border-l-2 border-primary-container pl-stack-md mb-stack-sm">"The shift towards edge computing in r/Technology highlights a critical need for more robust local-first data strategies."</p>
+<span class="font-metadata text-metadata text-outline">Commented in <a class="text-primary hover:underline" href="#">r/Technology</a> • 2d ago</span>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 bg-surface-container-high rounded-full flex items-center justify-center z-10 outline outline-4 outline-background">
+<span class="material-symbols-outlined text-[14px] text-tertiary" data-icon="bookmark">bookmark</span>
+</div>
+<span class="font-metadata text-metadata text-outline">Shared a case study in <a class="text-on-surface hover:text-primary transition-colors" href="#">r/Design</a> • 5d ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background dark:bg-background border-t border-outline-variant flat no shadows lg:ml-64 lg:w-[calc(100%-256px)]">
+<div class="flex flex-col items-center md:items-start mb-stack-lg md:mb-0">
+<span class="font-display text-label text-on-surface mb-stack-sm">LaraNews</span>
+<span class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant">© 2024 LaraNews Editorial. All rights reserved.</span>
+</div>
+<div class="flex flex-wrap justify-center gap-stack-lg">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Privacy</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Terms</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Archive</a>
+</div>
+</footer>
+
+
+</body></html>

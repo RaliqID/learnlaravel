@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Community Post</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background border-b border-outline-variant">
+<div class="font-display text-article-title-sm font-semibold text-primary">LaraNews</div>
+<div class="hidden md:flex space-x-stack-lg font-label text-label">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70 transition-opacity hover:text-primary transition-all duration-200" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 cursor-pointer active:opacity-70 transition-opacity hover:text-primary transition-all duration-200" href="#">Topics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70 transition-opacity hover:text-primary transition-all duration-200" href="#">Discovery</a>
+</div>
+<div class="flex items-center space-x-stack-md text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container transition-colors">person</span>
+</div>
+</nav>
+<!-- Main Container -->
+<main class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto grid grid-cols-12 gap-gutter">
+<!-- Sidebar (Left) -->
+<aside class="hidden lg:flex flex-col col-span-3 pr-gutter border-r border-outline-variant">
+<div class="mb-stack-lg">
+<h2 class="font-display text-article-title-sm text-primary mb-stack-sm">Communities</h2>
+<p class="font-metadata text-metadata text-on-surface-variant">Explore Topics</p>
+</div>
+<nav class="flex flex-col space-y-stack-sm font-label text-label">
+<a class="flex items-center p-stack-sm text-on-surface-variant hover:bg-surface-container transition-colors rounded hover:bg-surface-container-high transition-all scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined mr-stack-sm">auto_awesome</span> New
+                </a>
+<a class="flex items-center p-stack-sm text-primary font-bold bg-surface-container-highest rounded hover:bg-surface-container-high transition-all scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined mr-stack-sm">local_fire_department</span> Hot
+                </a>
+<a class="flex items-center p-stack-sm text-on-surface-variant hover:bg-surface-container transition-colors rounded hover:bg-surface-container-high transition-all scale-95 active:scale-100 transition-transform" href="#">
+<span class="material-symbols-outlined mr-stack-sm">trending_up</span> Top
+                </a>
+</nav>
+</aside>
+<!-- Content Area -->
+<article class="col-span-12 lg:col-span-9 pl-0 lg:pl-gutter">
+<!-- Post Header -->
+<header class="mb-content-gap">
+<div class="flex items-center space-x-stack-sm mb-stack-md">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="A macro portrait of an author's face. The lighting is cinematic and dramatic, casting soft shadows. Deep blacks and vibrant blues dominate the aesthetic. High quality, premium editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByslHyMVQveW2_IP_Z3FIvPIo9cxWRO1PDMSR6CriIsvjd4G2AP_aIzKc9MnUlnKMXMOO-yr5jVM4kpOLlmLxamEslK99Lj63xId-jmmgz8aAurT-j2W-FXKSCxBIvAqMnYtZHmR_WQmSkxak5cIMBrKulq3EQo3D0qBoBoUHgHGF_tplnC6os6iEMlN13kek3XJ8a1QQdIU9sngMlJGLV86Ep5uvVvn_SN8nf4Wcg8RnHgAVQ8Nps"/>
+</div>
+<div>
+<span class="font-metadata text-metadata text-on-surface">u/design_thinker</span>
+<span class="font-metadata text-metadata text-on-surface-variant mx-2">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">4 hours ago</span>
+</div>
+</div>
+<h1 class="font-page-title text-page-title text-on-background mb-stack-md leading-tight">The Evolution of Negative Space in Modern Digital Interfaces</h1>
+<div class="flex items-center space-x-stack-md">
+<span class="bg-surface-bright text-on-surface font-metadata text-metadata px-3 py-1">UI Design</span>
+<span class="bg-surface-bright text-on-surface font-metadata text-metadata px-3 py-1">Theory</span>
+</div>
+</header>
+<!-- Post Body -->
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-stack-lg mb-content-gap">
+<p>Negative space, often referred to as whitespace, is no longer just the empty area between elements; it has become a structural foundation in premium editorial design. By utilizing space as an active component rather than a passive void, designers can orchestrate the user's attention with profound precision.</p>
+<img class="w-full aspect-video object-cover my-stack-lg" data-alt="A minimalist architectural interior featuring vast expanses of white walls and subtle shadows. A single geometric skylight casts a sharp, dramatic beam of blue-tinted light onto a dark concrete floor. The mood is serene, intellectual, and contemplative, emphasizing negative space and modernism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC50M_f_65iXzBKCL5nls77RFVS3oP8slzN0Kgc_5K_Pob5HlUEOpFH7ZN0AJJ_MB-AaOflVTYfBXZBw4GdzsAHVPNgpssH2ojITTj2JtnleJZGCftdjzjob79dvcM9RaqFZ-cDuLErasc5pIyfo-3oDJtEIYT0YjMWImXYL7k-CTCfr6rHaF20nuJTqEXRcwow1B_9cvrgnUI1_RTe2glhlQL5G3NkArj0m6Dn2zvA63qlqaxa2UIY"/>
+<p>Consider the transition from traditional 'card-based' dashboard layouts to what we might call 'floating content.' When borders and drop shadows are stripped away, elements must rely on strict alignment and generous margins to define their relationships. This approach demands a rigorous underlying grid but rewards the user with a calmer, more confident reading experience.</p>
+<p>The absence of UI clutter forces a heightened focus on typography. The weight, tracking, and leading of text must carry the structural load previously handled by bounding boxes. It is a philosophy of 'Less UI, More Design.'</p>
+</div>
+<!-- Post Actions -->
+<div class="flex items-center space-x-stack-lg border-b border-outline-variant pb-stack-lg mb-content-gap">
+<div class="flex items-center space-x-stack-sm bg-surface-container rounded-full px-4 py-2">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<span class="font-label text-label text-on-surface">2.4k</span>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+<button class="flex items-center space-x-stack-sm text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label text-label">342 Comments</span>
+</button>
+<button class="flex items-center space-x-stack-sm text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="font-label text-label">Share</span>
+</button>
+</div>
+<!-- Discussion Section -->
+<section>
+<h3 class="font-section-title text-section-title text-on-surface mb-stack-lg">Discussion</h3>
+<!-- Comment Input -->
+<div class="mb-content-gap">
+<div class="border-b border-outline-variant focus-within:border-primary transition-colors pb-stack-sm">
+<input class="w-full bg-transparent border-none outline-none font-body-md text-on-surface placeholder-on-surface-variant focus:ring-0" placeholder="Add to the discussion..." type="text"/>
+</div>
+<div class="flex justify-end mt-stack-sm">
+<button class="bg-primary text-on-primary px-6 py-2 font-label text-label hover:bg-primary-container transition-colors">Post</button>
+</div>
+</div>
+<!-- Threaded Comments -->
+<div class="space-y-stack-lg">
+<!-- Comment Thread 1 -->
+<div class="relative">
+<!-- Comment 1 -->
+<div class="flex space-x-stack-md">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img class="object-cover w-full h-full" data-alt="A subtle geometric avatar pattern in deep grays and brand blues. High contrast, modern editorial style. Clean and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-LRYI6OOOIuWxybOxHvL0wSG0jtPznoDGmyutjFOy4A2T-oUAm27XR4RBMqAjP7ZD9bEHEGAV6Q0CbbZt2M89ZUJp-5-jXcDGW4u8A7pQ5sVlU9hUd6yPsvLY9__qpxC9yUhpQqDM7gYsP1MaEc0-jcKpNHIb7efhMMhIu62biM2QW2XVQlUuLY6ZM-dquJqQYicW1onbtDkdvFaWDuW5-CWfw4y4ZK_rLcXRzNWDmVptPpekwBnP"/>
+</div>
+<div class="w-[1px] h-full bg-outline-variant mt-2"></div>
+</div>
+<div class="flex-1 pb-stack-md">
+<div class="flex items-center space-x-stack-sm mb-1">
+<span class="font-metadata text-metadata text-on-surface">u/grid_system</span>
+<span class="font-metadata text-metadata text-on-surface-variant">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">2 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">Absolutely agree. The reliance on boxes is a crutch. When you remove them, you're forced to truly understand hierarchy through scale and proximity.</p>
+<div class="flex items-center space-x-stack-md font-metadata text-metadata text-on-surface-variant">
+<button class="flex items-center hover:text-primary transition-colors"><span class="material-symbols-outlined mr-1" style="font-size: 16px;">arrow_upward</span> 156</button>
+<button class="hover:text-on-surface transition-colors">Reply</button>
+</div>
+</div>
+</div>
+<!-- Nested Comment 1.1 -->
+<div class="flex space-x-stack-md ml-12 mt-stack-sm">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img class="object-cover w-full h-full" data-alt="A minimalist abstract avatar featuring a single glowing line against a pitch-black background. Modern, technical, and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcdc4hqK5ia-TwtCZyi0lmEXj44q2q7F1A__RzLvLKdiOi3AbKaHNRJEscYXe07Vfe9QlfdhrHodeQ3URTYJaifjIf9p03usa--Y7qmKCZn-W20s7wGloNYKJGYY_MjhYN6Ru8knV45M-XpkjfpOu3hhLmGmkoNQ-QSw7eOZiAAVGIOuRqXdi5u_HS9hC3kx-oKOaPGtNrphy7gb4xkBLjeUDzgaHEP1e0RsnUeKmdbNT9HCmwti7V"/>
+</div>
+</div>
+<div class="flex-1 pb-stack-md">
+<div class="flex items-center space-x-stack-sm mb-1">
+<span class="font-metadata text-metadata text-on-surface">u/typo_nerd</span>
+<span class="font-metadata text-metadata text-on-surface-variant">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">1 hour ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">The challenge is always convincing stakeholders that 'empty' space isn't 'wasted' space. It's the breathing room the content needs to be legible.</p>
+<div class="flex items-center space-x-stack-md font-metadata text-metadata text-on-surface-variant">
+<button class="flex items-center hover:text-primary transition-colors"><span class="material-symbols-outlined mr-1" style="font-size: 16px;">arrow_upward</span> 89</button>
+<button class="hover:text-on-surface transition-colors">Reply</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Comment Thread 2 -->
+<div class="flex space-x-stack-md">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img class="object-cover w-full h-full" data-alt="A dark, moody portrait photograph with high contrast. The subject is barely visible in shadow, creating an aura of mystery. Premium editorial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkncrcbkVaakXUCbTN02OO_mQN6Qs-9FHK3ZDy_teDYCtenMSF4emO0GWFYiK_QT-mgVV_E5yulLKTXLN2x4MwVbPdy9bl52MIJONn46FN9bkV4Jyj_8EnNsnZmR7p24A3Idon0aHrf6F7EVWYbVOIQz12nZXj8qI2co5H5_CieTMc5lljSMg78azFgaIkvEYlDX3VpUU63U4QfsGLwbOFYSRKOVXXyBJ1IU-0Z4nSi1MXQ36QzBo0"/>
+</div>
+</div>
+<div class="flex-1 pb-stack-md">
+<div class="flex items-center space-x-stack-sm mb-1">
+<span class="font-metadata text-metadata text-on-surface">u/contrast_ratio</span>
+<span class="font-metadata text-metadata text-on-surface-variant">•</span>
+<span class="font-metadata text-metadata text-on-surface-variant">3 hours ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">While I appreciate the aesthetic, sometimes a subtle 1px border is necessary to distinguish interactive areas from static content in dense interfaces.</p>
+<div class="flex items-center space-x-stack-md font-metadata text-metadata text-on-surface-variant">
+<button class="flex items-center hover:text-primary transition-colors"><span class="material-symbols-outlined mr-1" style="font-size: 16px;">arrow_upward</span> 42</button>
+<button class="hover:text-on-surface transition-colors">Reply</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background border-t border-outline-variant">
+<div class="font-display text-label text-on-surface mb-stack-md md:mb-0">
+            © 2024 LaraNews Editorial. All rights reserved.
+        </div>
+<div class="flex space-x-stack-lg font-metadata text-metadata">
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Terms</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Archive</a>
+</div>
+</footer>
+</body></html>

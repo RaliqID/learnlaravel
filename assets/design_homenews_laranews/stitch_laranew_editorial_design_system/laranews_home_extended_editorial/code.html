@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#00184a",
+                        "on-secondary-fixed": "#191c22",
+                        "on-tertiary-fixed-variant": "#45474c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#002a76",
+                        "surface-container-lowest": "#0c0e11",
+                        "error-container": "#93000a",
+                        "outline-variant": "#424655",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "on-primary-container": "#eeefff",
+                        "secondary-fixed-dim": "#c4c6d0",
+                        "secondary-container": "#464951",
+                        "on-secondary-fixed-variant": "#44474e",
+                        "secondary": "#c4c6d0",
+                        "inverse-surface": "#e2e2e6",
+                        "on-surface": "#e2e2e6",
+                        "surface": "#111317",
+                        "surface-variant": "#333538",
+                        "tertiary-container": "#6c6d73",
+                        "tertiary": "#c6c6cd",
+                        "on-secondary": "#2d3038",
+                        "surface-container": "#1e2023",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#b3c5ff",
+                        "surface-container-highest": "#333538",
+                        "surface-container-high": "#282a2d",
+                        "inverse-primary": "#0054d8",
+                        "tertiary-fixed-dim": "#c6c6cd",
+                        "inverse-on-surface": "#2f3034",
+                        "primary-container": "#1d63ed",
+                        "on-tertiary": "#2e3036",
+                        "surface-dim": "#111317",
+                        "on-surface-variant": "#c3c6d7",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-tertiary-fixed": "#1a1b21",
+                        "surface-container-low": "#1a1c1f",
+                        "tertiary-fixed": "#e2e2e9",
+                        "on-secondary-container": "#b6b8c1",
+                        "on-tertiary-container": "#f0f0f7",
+                        "on-background": "#e2e2e6",
+                        "background": "#111317",
+                        "secondary-fixed": "#e0e2ec",
+                        "surface-bright": "#37393d",
+                        "outline": "#8d90a1",
+                        "primary-fixed": "#dbe1ff",
+                        "primary": "#b3c5ff",
+                        "on-error": "#690005"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "reading-width": "720px",
+                        "stack-md": "16px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "8px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "display-xl": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "headline-lg": ["Geist"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.8", letterSpacing: "0", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "1.4", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.03em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-gutter h-12 max-w-container-max mx-auto bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant transition-all duration-200 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">
+            LaraNews
+        </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-primary dark:text-primary font-bold border-b-2 border-primary h-12 flex items-center" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/50 rounded-lg px-3 py-1" href="#">Topics</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors hover:bg-surface-variant/50 dark:hover:bg-surface-variant/50 rounded-lg px-3 py-1" href="#">Discovery</a>
+</div>
+<div class="flex items-center gap-stack-md text-primary dark:text-primary">
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</nav>
+<main class="flex-1 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-[80px] pb-section-gap flex flex-col">
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<article class="md:col-span-8 group cursor-pointer flex flex-col gap-stack-md">
+<div class="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img class="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out" data-alt="A striking digital architectural photography shot of an ultra-minimalist, brutalist interior space designed for solitude within a dense megacity. The space features sheer concrete walls, soft ambient natural light filtering through a narrow skylight, and a single, elegant wooden chair. The aesthetic is high-end editorial, sophisticated, calm, and technically precise, emphasizing vast negative space and a moody, atmospheric depth. Corporate tech journalism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfi6YzhrMoTRaIkEN11C_SO2c-hFF_gRobqhrA5dmTRDvUIp90YhIdkSzUIkC_SWneFdSxGx7TqMfzD4ZHI1UagHgHzqvUJR5vDf6nly0WBQin0dVvVHwKhpxdRb3rj83kqZoizyblF9L725VRaVP-tjiILywbxFxejJTKHJDI48MNMys2nO6WiiRzczk4QeetxSjUqlGYvmtU2ZJXtPrmBtb2suxbA6f7VRwDyBBANnf5gvBPD_VS"/>
+</div>
+<div class="flex flex-col gap-stack-sm pr-0 md:pr-12">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Urbanism</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12 min read</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface tracking-tight group-hover:text-primary transition-colors duration-300">Designing for Solitude in Megacities</h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-reading-width mt-2">A deep dive into the psychological necessity of introverted spaces within hyper-dense urban environments, and the architectural vanguard engineering structural silence.</p>
+</div>
+</article>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<article class="group cursor-pointer flex flex-col gap-stack-sm pb-gutter border-b border-outline-variant h-full justify-between">
+<div class="flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-[16/9] md:aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low mb-2">
+<img class="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out" data-alt="A macro photography shot of complex semiconductor silicon wafers arranged in an asymmetrical, abstract pattern. The lighting is dramatic and moody, with subtle neon blue edge highlights cutting through deep, dark charcoal shadows. The image evokes a sense of high-tech precision, global supply chain logistics, and developer-centric cleanliness. Premium editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlM_o9b1VgnhMPmrXJKivtYz4YPaFHuKgV4mKLFCTqWPuYIwsn0H98Y5OXd6ud5zEctOiGeI5RFGL2Km0yrSBd3Vdog-2ewLC_qSyw-eiW1SO7qL9mEW5fUycY87S-nyp8QhUNvn84-W889gX6VBolkZ63lEY5McHEn27MwInKoWz9SLC1we8PSVi2csNjyREhv9vmFcLI5gNPUO5Zp-pqB0RhYKr_o4uhjafpsjXlukpYhkkb6YGQ"/>
+</div>
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Technology</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">The Semiconductor Supply Chain Realignment</h2>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm h-full justify-start pt-2">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Culture</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Post-Algorithmic Music Discovery</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mt-1">As generative curation reaches parity, listener behaviors are radically shifting towards human-curated micro-communities.</p>
+</article>
+</div>
+</section>
+<div class="w-full border-t border-outline-variant my-section-gap opacity-50"></div>
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col">
+<div class="flex items-baseline justify-between mb-stack-lg pb-stack-sm border-b border-outline-variant">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Latest Dispatches</h3>
+<a class="font-label-sm text-label-sm text-primary hover:text-on-surface transition-colors uppercase tracking-widest" href="#">View All</a>
+</div>
+<div class="flex flex-col">
+<article class="py-stack-md border-b border-outline-variant/50 group cursor-pointer flex flex-col md:flex-row gap-stack-md md:gap-gutter items-start">
+<div class="flex-1 flex flex-col gap-stack-sm order-2 md:order-1">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Policy</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Regulatory Frameworks for Generative Models in the EU</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">Analyzing the draft language of the upcoming tech summit and its implications for open-source model distribution.</p>
+</div>
+<div class="w-full md:w-[240px] aspect-video border border-outline-variant rounded-DEFAULT overflow-hidden bg-surface-container-low shrink-0 order-1 md:order-2">
+<img class="object-cover w-full h-full group-hover:opacity-80 transition-opacity" data-alt="A conceptual digital illustration representing European Union regulatory frameworks applied to artificial intelligence. It features a glowing, abstract neural network mesh being measured or constrained by sharp, translucent geometric calipers in a dark, atmospheric void. The color palette relies on deep blacks and subtle blues, conveying authority, structural precision, and a minimalist corporate feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBMec0qbLvu4ctKdQy3NUquYgg5MjCYYkdiPKrU_Kbj_ndfFarOQWnvOVViBsZI8MaYYGdY_8IC1ZTnEkFqA0B59zig4mZN-mShf_MPRCbYQoXqMn4cVV9CerIlPDes3mDO4V-ky42Lx7xFoROGMzaL0HI-YhsSdpsV3Vix5f2u6dtdmWfyjGp7f1egbypuH4es0iP_cw69Zzq7g4RZlUl798Y8SuC4D1QHL8KoC0aivRzFEbPXnTy"/>
+</div>
+</article>
+<article class="py-stack-md border-b border-outline-variant/50 group cursor-pointer flex flex-col md:flex-row gap-stack-md md:gap-gutter items-start">
+<div class="flex-1 flex flex-col gap-stack-sm order-2 md:order-1">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Science</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 23</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Quantum Supremacy and Materials Engineering</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">The theoretical limits of current topological qubits and the race to discover stable, room-temperature superconducting materials.</p>
+</div>
+</article>
+<article class="py-stack-md border-b border-outline-variant/50 group cursor-pointer flex flex-col md:flex-row gap-stack-md md:gap-gutter items-start">
+<div class="flex-1 flex flex-col gap-stack-sm order-2 md:order-1">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Economics</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 21</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">The Erosion of the Subscription Model</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">Consumer fatigue hits a critical threshold as fragmented SaaS offerings face consolidation pressures from decentralized protocols.</p>
+</div>
+</article>
+</div>
+</div>
+<aside class="md:col-span-4 flex flex-col mt-section-gap md:mt-0 pl-0 md:pl-gutter md:border-l border-outline-variant">
+<div class="flex items-baseline justify-between mb-stack-lg pb-stack-sm border-b border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Trending</h3>
+</div>
+<div class="flex flex-col gap-stack-lg">
+<article class="group cursor-pointer flex gap-stack-md items-start">
+<span class="font-headline-md text-headline-md text-surface-variant font-bold tabular-nums">01</span>
+<div class="flex flex-col gap-1">
+<h5 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors leading-tight">The Decline of the Infinite Scroll Interface</h5>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Design</span>
+</div>
+</article>
+<article class="group cursor-pointer flex gap-stack-md items-start">
+<span class="font-headline-md text-headline-md text-surface-variant font-bold tabular-nums">02</span>
+<div class="flex flex-col gap-1">
+<h5 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors leading-tight">Synthetic Data and the Future of Training Sets</h5>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AI</span>
+</div>
+</article>
+<article class="group cursor-pointer flex gap-stack-md items-start">
+<span class="font-headline-md text-headline-md text-surface-variant font-bold tabular-nums">03</span>
+<div class="flex flex-col gap-1">
+<h5 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors leading-tight">Atmospheric Water Harvesting Milestones</h5>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Climate</span>
+</div>
+</article>
+<article class="group cursor-pointer flex gap-stack-md items-start">
+<span class="font-headline-md text-headline-md text-surface-variant font-bold tabular-nums">04</span>
+<div class="flex flex-col gap-1">
+<h5 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors leading-tight">Re-evaluating the Remote Work Productivity Metrics</h5>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Workforce</span>
+</div>
+</article>
+</div>
+</aside>
+</section>
+<div class="w-full border-t border-outline-variant my-section-gap opacity-50"></div>
+<section class="flex flex-col mb-section-gap">
+<div class="flex items-baseline justify-between mb-stack-lg pb-stack-sm border-b border-outline-variant">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Deep Dives</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<article class="md:col-span-7 group cursor-pointer flex flex-col gap-stack-md">
+<div class="relative w-full aspect-[4/3] md:aspect-square overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Abstract global network concept" class="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwkbbYvleNyrmMMqpDVs67MphqVXOlb-QWWenbzHHzMem4LtRJ2v1xMIUHdlvbnia72B7cg8f5TP6zTdSzVaVVxR1vzeQFfvIvoFhygQoTHJ6rXJjXtCvWBldHLW6Zy1goWVyF8MiukWeh5RG-ie14VQ3QXF1b4Lv7RCInoGKfIU0HECXg9d6aRpEi5IAA-w8KG40pU4LqoQM6RWhbTr5zCbIg2jG-Xam9u3E_iygiLojgi6wvjTo_"/>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Geopolitics</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25 min read</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface tracking-tight group-hover:text-primary transition-colors duration-300">The Architecture of Global Subsea Networks</h2>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant mt-2">Investigating the fragile, invisible nervous system of the modern internet, and the geopolitical maneuvering to control the seabed's data superhighways.</p>
+</div>
+</article>
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low mb-2">
+<img alt="Microchip technology" class="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw4yuT_ecd3PoKXi4bXtnMJ-1TVSjwy7Se32Hmu2wyE-rfQZFjfbOnkld-3uyk2PXj6tAIi94w76oe5-d3JWv_irI-JfUW6SljCTwl1xANswgMmKA5XVQltZ8cGtaIdy7aM7_LX0s8Hlr8zvFJxYXnpgOVrAinwqxtdzwdJU3CIid1e56KH51r6EuKWSJWqqerULLKec6bvzcTuhcTyFWUCNPxgVEKXi0uaKUW3Uqv8MGCRW-R9vOp"/>
+</div>
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Hardware</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Beyond Moore's Law: The Next Silicon Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">An exploration into non-von Neumann architectures and the push towards biological computing models.</p>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm pt-4 border-t border-outline-variant/50">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Ecology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Deconstructing the Urban Microbiome</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">How hyper-dense living spaces alter the microbial ecosystems we interact with daily.</p>
+</article>
+</div>
+</div>
+</section>
+<div class="w-full border-t border-outline-variant my-section-gap opacity-50"></div>
+<section class="flex flex-col mb-section-gap">
+<div class="flex items-baseline justify-between mb-stack-lg pb-stack-sm border-b border-outline-variant">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Industry Perspectives</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group cursor-pointer flex flex-col gap-stack-md p-6 bg-surface-container-low rounded-DEFAULT border border-outline-variant hover:border-primary transition-colors">
+<div class="flex items-center gap-stack-sm">
+<img alt="Author avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtjj8z7hDLcdvJHHfW-Lj3mbuoOPJB_dfBh6SFNPnz0HGd7FuM8FH3ooszjcNbvFGOM3upRDkKHzCEAtoSQ9Pu3EQqfBlPJGi3YinZ3ZFTeR8fD7r9mypMLpHskFS69VCkSSBFLWsrV03t3h8i0SXziq3GBpHjRvr6lWvI716FCPVFLqIC30cGkyWAOxL2Q_BYNKxW3oqRNPgjNtCa6lp-UqTEOOlLkoVv9Hw6VZc6Y31KK1i7noBG"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Dr. Aris Veldt</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">Chief Economist</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">The Fallacy of Infinite Growth in SaaS Models</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">A sobering look at the structural limits of recurring revenue models when consumer fatigue outpaces product innovation.</p>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-md p-6 bg-surface-container-low rounded-DEFAULT border border-outline-variant hover:border-primary transition-colors">
+<div class="flex items-center gap-stack-sm">
+<img alt="Author avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANgkufMQhYn1haZXFocqfmvJAvDDjauNMrogfb984U8rWWIw_su3qc1w80buyzkR4IgGD7q0fbtevTvEXrEMQNutiUzhYdq2bT4mWG4aGyrPq088llDjFhaPRwZ5wzWTHEVqt7l81nZrY9vH2m9drnz-sLUpFfYz1I6Z9jPEwtoWo7qaH_SqYPoIEao2WfoufQB37QAI6O7Vr7Hz9JF4Ps5TkEtO2msOLlDMXvNv1geUat0H3iH2L5"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Elena Rostova</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">AI Ethics Lead</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Navigating the Synthetic Data Paradox</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">When models train on model-generated outputs, we risk a recursive degradation of structural truth in AI responses.</p>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-md p-6 bg-surface-container-low rounded-DEFAULT border border-outline-variant hover:border-primary transition-colors">
+<div class="flex items-center gap-stack-sm">
+<img alt="Author avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA0naH5DwPty-4tN8SXyaY_WOejTKroLmHHCcMfil7ojGRlq0RvEzRUOazC74fSi4nF9vP0Hw0x-Wky_5oF1HH-mbcKAWLTk-z6TqoeSKwlcKbpETLhK_7XQiiX6HbFvewJ_zJgIA7qzfQboMktC93z6tlJmiLeD7szGScoDtDTAjwZtBlNAsM8p1p_L-Pfr7fkHADsv1hGn8CMike3dTDqqehimIHc1rutO1Mo1WC544z_zT2-Vgm"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Marcus Chen</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-widest">Urban Strategist</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Retrofitting the Suburbs for Post-Automotive Living</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">The logistical challenges of converting sprawl into functional, dense micro-communities in the coming decade.</p>
+</article>
+</div>
+</section>
+<div class="w-full border-t border-outline-variant my-section-gap opacity-50"></div>
+<section class="flex flex-col mb-section-gap max-w-[900px] mx-auto w-full">
+<div class="flex items-center justify-center mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-widest uppercase">The Archive</h3>
+</div>
+<div class="flex flex-col border-t border-outline-variant/30">
+<article class="group cursor-pointer flex flex-col md:flex-row md:items-center justify-between py-stack-md border-b border-outline-variant/30 gap-stack-sm">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors md:w-2/3">The Decentralized Autonomous Organization Experiment</h4>
+<div class="flex items-center gap-stack-sm md:w-1/3 md:justify-end">
+<span class="font-label-sm text-label-sm text-outline-variant">2023</span>
+<span class="text-outline-variant/50">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Finance</span>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col md:flex-row md:items-center justify-between py-stack-md border-b border-outline-variant/30 gap-stack-sm">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors md:w-2/3">CRISPR and the Democratization of Genetics</h4>
+<div class="flex items-center gap-stack-sm md:w-1/3 md:justify-end">
+<span class="font-label-sm text-label-sm text-outline-variant">2022</span>
+<span class="text-outline-variant/50">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biotech</span>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col md:flex-row md:items-center justify-between py-stack-md border-b border-outline-variant/30 gap-stack-sm">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors md:w-2/3">The Philosophy of the Minimum Viable Product</h4>
+<div class="flex items-center gap-stack-sm md:w-1/3 md:justify-end">
+<span class="font-label-sm text-label-sm text-outline-variant">2021</span>
+<span class="text-outline-variant/50">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Startups</span>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col md:flex-row md:items-center justify-between py-stack-md border-b border-outline-variant/30 gap-stack-sm">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors md:w-2/3">A Brief History of the Algorithmic Feed</h4>
+<div class="flex items-center gap-stack-sm md:w-1/3 md:justify-end">
+<span class="font-label-sm text-label-sm text-outline-variant">2019</span>
+<span class="text-outline-variant/50">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Social</span>
+</div>
+</article>
+</div>
+</section>
+<div class="w-full border-t border-outline-variant my-section-gap opacity-50"></div>
+<section class="flex flex-col mb-section-gap">
+<div class="flex items-baseline justify-between mb-stack-lg pb-stack-sm border-b border-outline-variant">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Global Intelligence</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Financial graphs" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB9qIG7aV10zhiWy3qzCkMSY1BLY3OgJasFI55uzzErVWQ2TYWjRM8Omjw-Pc1pDwAu6KmQFYMCbR4zMynZ0KtlxxjsOfvp44ZYiAqPPP6Ee6ntruILzpnAY4H4HMQuD2Chh-toWPIDFQ-RNZujK9lmjnZdnlfrcdLpfOvaC8btv2fGBDmYHJnzp8H37Zd3_E4n5SKForRYdRnaFhUH4vnau0BXOHYug51pOBqFZ1oo83eTpmhWLhI"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Markets</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">European Central Bank Adjusts Target Rates Amid Synthetic Inflation</h4>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Abstract space/satellite" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7EJGJQet_F0cMFFZiunmX8gXdeUxBKrqnv0yiJaT-4yDEjzNEu7CgAsEfDjxBPo3aMYIUS8xgoNO3SxHVQ8E_OA33NHyyJ9D12oNHtCzO8_07xKG-qQbKAGSTV7m90ONb_aCwulgLw9HYtZMKeOR8SEzGk4uOq2nqXO4wmNLnbIWf33AZ8td9crJEBrC9UEPOa_dKEyV3DFMLLi6P6fBTQD-aMK4BuAYomSCkmaYHD4YGgHs2or8"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Aerospace</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">Private Constellations Face Orbital Debris De-orbiting Mandates</h4>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Medical science" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnOBkZh1TpvpuSfIBhs7fXaS-Cr_LYIb4P03B-gQn8jiEusUxoyp4opQLNcaUqaKPIyoYir9X_wpqtN0Gbv6beUa294ayVaCK5wBlIARI1BYJRNO58fqWwdPogIE-B9s79e39y8AQKrB7-Cljd_f2j2o0T7P2L9ELIY8kkH4BW3OtWSUg6HMAat8NX5QyUlOyzxghLNC9zgCryTFlyqic0P9XUY3QFvIONcIAsrMVG3ye2CSqqmINY"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Medicine</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">Breakthroughs in Personalized mRNA Therapies Move to Phase III</h4>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Environment" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKkI4AU33Yk6nWNuALYSIZxHxQ2h9e22CFjzsO8-9xkCeXIMJh1z-LyKRqCw5-ewtO1quvCSm6SVS-PKdC0xLpzzzCMl-SzyvV5zhRor5HKRXXmnLaVyFMZ0d8_XkrGKKbHvbZbuNekFbG3Q2rtRybMtTu_nZmh8jHqYQL6sVU2e4DkUVM2IL45i5DACKEQk29HnDaMVMglqz6nKKImmioMQF4Pqxs1JkDDRNWGvRHG6StJPiFVG8o"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Environment</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">New Desalination Techniques Drastically Reduce Energy Requirements</h4>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Data visualization" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2MwqT4TJ1E9msxo-kNUM5W8bx_Wmj3o47CzumgkRSADasqrFMZqyYFWs_19qwNhwysE25eGK5nzwWkr_LpSwW6vDmfx_QjMfegTngdhmPmcgdLi_NvJmnHP4e_Mj4LeBOpoISx7X97gJMV9FqLq7fVTmIzwiYhiVK9mSib7jH2DK4LkEzug26mn1UdReYcnvn9DWoB4iaW0EQaI48Ya_mju-zyV88ltx42JG6YlZ6caEZe5cabXxM"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Cybersecurity</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">Zero-Day Vulnerabilities in Legacy Banking Infrastructure Exposed</h4>
+</div>
+</article>
+<article class="group cursor-pointer flex flex-col gap-stack-sm">
+<div class="relative w-full aspect-video overflow-hidden rounded-DEFAULT border border-outline-variant bg-surface-container-low">
+<img alt="Technology abstract" class="object-cover w-full h-full group-hover:scale-[1.05] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT_6btWqWo9fENEAUnJC-CfQUYn8EFUN7P4-PX6uquxsa0VcVIxjgKVvG_3KzLejXG4O-8U3o7ErEjihuBAko5iTCMT_A4Ga5Ua-R5yYQ0PWDfLDTyi_ZN2vE725_O2lpb94D0Q9disBE-w17yrXjmKxvtb7AHB0IOiAynKLHa1HrnyId18y8CKvdQdV4jcMIANsp2gIGBGSJY60Bw_bOgzeufJ8BuKbu2qTTDqZ85Ih4dJWbab4hP"/>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Logistics</span>
+<h4 class="font-body-lg text-body-lg font-medium text-on-surface group-hover:text-primary transition-colors leading-snug">Autonomous Freight Corridors Approved in Key Industrial Zones</h4>
+</div>
+</article>
+</div>
+</section>
+<div class="w-full bg-surface-container-low border-y border-outline-variant py-section-gap mt-section-gap -mx-margin-mobile md:-mx-gutter px-margin-mobile md:px-gutter">
+<div class="max-w-[720px] mx-auto flex flex-col items-center text-center gap-stack-lg">
+<div class="flex flex-col gap-stack-sm items-center">
+<h3 class="font-headline-lg-mobile md:font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface tracking-tight">The Signal in the Noise.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[500px]">Join thousands of industry leaders receiving our curated dispatch of essential technological, cultural, and geopolitical intelligence.</p>
+</div>
+<form class="flex flex-col sm:flex-row gap-stack-sm w-full max-w-[500px]">
+<input class="flex-1 bg-surface border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Enter your email address" type="email"/>
+<button class="bg-primary-container text-[#fff] hover:bg-primary-fixed-dim transition-colors px-6 py-3 rounded-DEFAULT font-label-md tracking-wider" type="submit">
+                Join the Conversation
+            </button>
+</form>
+</div>
+</div>
+</main>
+<footer class="w-full mt-auto px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface dark:bg-surface py-section-gap border-t border-outline-variant dark:border-outline-variant">
+<div class="font-headline-md text-headline-md text-on-surface">LaraNews</div>
+<div class="flex flex-wrap justify-center gap-stack-md md:gap-stack-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Archive</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+            © 2026 LaraNews Editorial Platform. All rights reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,188 @@
+/* ============================================================
+   LARANEWS — DESIGN TOKENS (Stitch design system)
+   Dark editorial. Premium, minimal, sharp corners.
+   Source: assets/laranews_design_system/DESIGN.md
+   ============================================================ */
+
+@theme {
+  /* --- Colors: Sophisticated Dark Mode (Material-ish ref) --- */
+  --color-background: #11131b;            /* main canvas */
+  --color-on-background: #e1e2ed;
+  --color-surface: #11131b;
+  --color-surface-dim: #11131b;
+  --color-surface-bright: #373942;
+  --color-surface-container-lowest: #0c0e16;
+  --color-surface-container-low: #191b23;
+  --color-surface-container: #1d1f28;
+  --color-surface-container-high: #272a32;
+  --color-surface-container-highest: #32343d;
+  --color-on-surface: #e1e2ed;
+  --color-on-surface-variant: #c3c6d7;
+  --color-inverse-surface: #e1e2ed;
+  --color-inverse-on-surface: #2e3039;
+  --color-outline: #8d90a1;
+  --color-outline-variant: #424655;
+  --color-surface-tint: #b3c5ff;
+  --color-surface-variant: #32343d;
+  --color-primary: #b3c5ff;
+  --color-on-primary: #002a76;
+  --color-primary-container: #1d63ed;
+  --color-on-primary-container: #eeefff;
+  --color-inverse-primary: #0054d8;
+  --color-primary-fixed: #dbe1ff;
+  --color-primary-fixed-dim: #b3c5ff;
+  --color-on-primary-fixed: #00184a;
+  --color-on-primary-fixed-variant: #003fa5;
+  --color-secondary: #c6c6c8;
+  --color-on-secondary: #2f3132;
+  --color-secondary-container: #454749;
+  --color-on-secondary-container: #b4b5b7;
+  --color-secondary-fixed: #e2e2e4;
+  --color-secondary-fixed-dim: #c6c6c8;
+  --color-on-secondary-fixed: #1a1c1d;
+  --color-on-secondary-fixed-variant: #454749;
+  --color-tertiary: #c6c6cf;
+  --color-on-tertiary: #2f3037;
+  --color-tertiary-container: #6c6d75;
+  --color-on-tertiary-container: #f1f0fa;
+  --color-tertiary-fixed: #e2e1eb;
+  --color-tertiary-fixed-dim: #c6c6cf;
+  --color-on-tertiary-fixed: #1a1b22;
+  --color-on-tertiary-fixed-variant: #45464e;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-success: #16a34a;
+  --color-success-soft: rgba(22, 163, 74, 0.16);
+  --color-warning: #d97706;
+  --color-warning-soft: rgba(217, 119, 6, 0.16);
+  --color-danger: #ffb4ab;
+  --color-danger-soft: rgba(147, 0, 10, 0.35);
+
+  --color-focus-ring: rgba(179, 197, 255, 0.5);
+
+  --color-skeleton-base: #27272a;
+  --color-skeleton-shine: #32343d;
+
+  /* --- Typography: Geist (single typeface, editorial precision) --- */
+  --font-sans: 'Geist Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Stitch font-family aliases */
+  --font-page-title: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-page-title-mobile: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-section-title: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-article-title-lg: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-article-title-sm: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-article-title-mobile: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-metadata: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Scale (Stitch typography tokens) --- */
+  --text-2xl: 1.5rem;                     /* section-title 24px */
+  --text-xl: 1.25rem;                     /* article-title-sm 20px */
+  --text-lg: 1.125rem;                    /* body-lg 18px */
+  --text-base: 1rem;                      /* body-md 16px */
+  --text-sm: 0.875rem;                    /* label 14px */
+  --text-xs: 0.8125rem;                   /* metadata 13px */
+
+  --text-display: 48px;
+  --text-display--line-height: 56px;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 600;
+  --text-display-desktop: 72px;
+  --text-display-desktop--line-height: 80px;
+  --text-display-desktop--letter-spacing: -0.04em;
+  --text-page-title: 48px;
+  --text-page-title--line-height: 56px;
+  --text-page-title--letter-spacing: -0.02em;
+  --text-page-title--font-weight: 500;
+  --text-page-title-mobile: 32px;
+  --text-page-title-mobile--line-height: 40px;
+  --text-page-title-mobile--letter-spacing: -0.02em;
+  --text-page-title-mobile--font-weight: 500;
+  --text-section-title: 24px;
+  --text-section-title--line-height: 32px;
+  --text-section-title--letter-spacing: -0.01em;
+  --text-section-title--font-weight: 500;
+  --text-article-title-lg: 32px;
+  --text-article-title-lg--line-height: 40px;
+  --text-article-title-lg--letter-spacing: -0.01em;
+  --text-article-title-lg--font-weight: 500;
+  --text-article-title-sm: 20px;
+  --text-article-title-sm--line-height: 28px;
+  --text-article-title-sm--font-weight: 500;
+  --text-article-title-mobile: 24px;
+  --text-article-title-mobile--line-height: 32px;
+  --text-article-title-mobile--letter-spacing: -0.01em;
+  --text-article-title-mobile--font-weight: 500;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 30px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 26px;
+  --text-label: 14px;
+  --text-label--line-height: 20px;
+  --text-label--letter-spacing: 0.01em;
+  --text-label--font-weight: 600;
+  --text-metadata: 13px;
+  --text-metadata--line-height: 18px;
+  --text-metadata--letter-spacing: 0.02em;
+  --text-metadata--font-weight: 500;
+
+  --leading-body: 1.625;                  /* 26/16 */
+  --leading-relaxed: 1.66;                /* body-lg 30/18 — used by post dek/content/comments */
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 600;                /* editorial: bold = 600, not 700 */
+
+  --tracking-metadata: 0.02em;
+
+  /* --- Radius: Sharp (0px) — editorial precision --- */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px;                  /* avatars / dots only */
+
+  /* --- Shadows: depth via tonal layering, not shadows. Minimal. --- */
+  --shadow-xs: 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+  /* --- Spacing: 4px base + editorial rhythm --- */
+  --spacing-margin-desktop: 80px;
+  --spacing-margin-tablet: 40px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-section-gap: 120px;
+  --spacing-content-gap: 48px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 24px;
+
+  /* --- Container / reading lane --- */
+  --container-desktop: 1440px;
+
+  /* --- Breakpoints --- */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* --- Z-index --- */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-toast: 1080;
+}

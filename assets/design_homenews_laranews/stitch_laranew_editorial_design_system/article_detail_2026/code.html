@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Article Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#00184a",
+                    "on-secondary-fixed": "#191c22",
+                    "on-tertiary-fixed-variant": "#45474c",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#002a76",
+                    "surface-container-lowest": "#0c0e11",
+                    "error-container": "#93000a",
+                    "outline-variant": "#424655",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "on-primary-container": "#eeefff",
+                    "secondary-fixed-dim": "#c4c6d0",
+                    "secondary-container": "#464951",
+                    "on-secondary-fixed-variant": "#44474e",
+                    "secondary": "#c4c6d0",
+                    "inverse-surface": "#e2e2e6",
+                    "on-surface": "#e2e2e6",
+                    "surface": "#111317",
+                    "surface-variant": "#333538",
+                    "tertiary-container": "#6c6d73",
+                    "tertiary": "#c6c6cd",
+                    "on-secondary": "#2d3038",
+                    "surface-container": "#1e2023",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#b3c5ff",
+                    "surface-container-highest": "#333538",
+                    "surface-container-high": "#282a2d",
+                    "inverse-primary": "#0054d8",
+                    "tertiary-fixed-dim": "#c6c6cd",
+                    "inverse-on-surface": "#2f3034",
+                    "primary-container": "#1d63ed",
+                    "on-tertiary": "#2e3036",
+                    "surface-dim": "#111317",
+                    "on-surface-variant": "#c3c6d7",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "on-tertiary-fixed": "#1a1b21",
+                    "surface-container-low": "#1a1c1f",
+                    "tertiary-fixed": "#e2e2e9",
+                    "on-secondary-container": "#b6b8c1",
+                    "on-tertiary-container": "#f0f0f7",
+                    "on-background": "#e2e2e6",
+                    "background": "#111317",
+                    "secondary-fixed": "#e0e2ec",
+                    "surface-bright": "#37393d",
+                    "outline": "#8d90a1",
+                    "primary-fixed": "#dbe1ff",
+                    "primary": "#b3c5ff",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "reading-width": "720px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Geist", "sans-serif"],
+                    "body-lg": ["Geist", "sans-serif"],
+                    "label-sm": ["Geist", "sans-serif"],
+                    "display-xl": ["Geist", "sans-serif"],
+                    "headline-md": ["Geist", "sans-serif"],
+                    "body-md": ["Geist", "sans-serif"],
+                    "headline-lg-mobile": ["Geist", "sans-serif"],
+                    "headline-lg": ["Geist", "sans-serif"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                    "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0", "fontWeight": "400" }],
+                    "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                    "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                    "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant transition-all duration-200 ease-in-out h-12">
+<div class="flex items-center justify-between px-gutter h-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface" href="#">LaraNews</a>
+<div class="hidden md:flex items-center h-full gap-stack-lg">
+<a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
+<a class="h-full flex items-center font-label-md text-label-md text-primary font-bold border-b-2 border-primary" href="#">Topics</a>
+<a class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Discovery</a>
+</div>
+<div class="flex items-center gap-stack-sm text-primary">
+<button class="hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="hover:bg-surface-variant/50 rounded-lg p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img class="w-6 h-6 rounded-full object-cover ml-2 border border-outline-variant" data-alt="A tightly cropped, high-contrast black and white portrait of a professional individual against a deep charcoal background. The lighting is dramatic and directional, highlighting the contours of the face while leaving part of it in deep shadow. This image fits a premium editorial aesthetic, conveying authority and sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyOgSN74pmOnojpAWRgRg0vJU7YYVBOp9qfc_IqvW5dHI9wX548FvMI4m3qoTXtb9E357WMHEcEcpLJRRvakG_4RgXSz50_c1h65CskjL_kcgMnosENMqEr5A92IgkAisNU4OAlcD_dBxmjQEI-nFbIRZkT52SOMWsYpncOSCQLsFjiZ-6QJuD6_x3i-wf4Mgvp8V0tdJ-v11rK6r0pJpP61Kt0dUT41EIw-bpLsEcEOAoaZTo0Ao"/>
+</div>
+</div>
+</nav>
+<!-- Main Article Content -->
+<main class="flex-grow pt-[120px] pb-section-gap px-gutter">
+<article class="max-w-reading-width mx-auto flex flex-col gap-stack-lg">
+<!-- Header -->
+<header class="flex flex-col gap-stack-md text-left">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary border border-outline-variant px-3 py-1 rounded">Technology</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface hidden md:block">The Structural Shift: Generative Interfaces in 2026</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface md:hidden">The Structural Shift: Generative Interfaces in 2026</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    How deterministic design paradigms are giving way to fluid, AI-driven digital environments that prioritize semantic intent over static layouts.
+                </p>
+<!-- Metadata & Actions -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between w-full border-y border-outline-variant py-4 mt-stack-md gap-stack-md">
+<div class="flex items-center gap-stack-md">
+<img class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A minimalist avatar portrait of a technical writer, featuring a stylized geometric representation of a human face in monochromatic tones. The image is set against a dark surface-level background, utilizing subtle tonal shifts rather than stark outlines. It evokes a sense of modern digital craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9AdUx7TrhcsfLYYIpWQmRY1ut9d5OAtZGiil5NZXJZkU4K1gNgK6wlod_t0GFNdWPOpPdVDeEqJW1yyYZkD--F1N-ZlspzVAz56qSwn24YKoi8V1D_XmXQVXh3dgnpHMaoM20vNw9nLxAbLahOdFlZo9pKj0PZZpc5Dg6TbhbTm7JzqWLoNCVTulZMClzAwoe-LY6E86vDZK98Cs7-XhMiUYMXbqS07Ugsfw3kH9UvwcugqsgZ0UA"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Elias Thorne</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">October 24, 2026 • 8 min read</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center rounded hover:bg-surface-variant/50">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center rounded hover:bg-surface-variant/50">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Image -->
+<figure class="w-full">
+<img class="w-full aspect-[21/9] object-cover rounded-xl border border-outline-variant" data-alt="A wide, cinematic render of a futuristic, abstract digital interface floating in a dark void. Glowing, ultra-thin hairlines in electric blue intersect to form dynamic grids and minimalist data nodes. The lighting is subtle, creating depth through tonal shifts rather than harsh shadows, perfectly matching a premium, developer-centric dark mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0XCDl3v8Wdj7dFd2QvkyRpZlGrbn_Ezvtr5Vy54CvaKuu8kpyS_ZiuirvO9QfUBI-CgWGYfbVvjBy_rpX_GJGyY90kYt1QapEAk2hEoVbcWKJy5T2vwwvoOpo9J8zJxiavYnOb9iNBE2POQxY0c5DDUU-031jNo5TixL7pTwftyVeUmaLDRdijqZWPQ4vJ0R7FwH1drLFtSTZt5hbWds8-_FwZljtNDMhHv3VBhaSwGfX7Clq_7f"/>
+<figcaption class="mt-3 font-label-sm text-label-sm text-on-surface-variant text-center tracking-wide">
+                    Visualization of a semantic node structure adapting to real-time user query constraints.
+                </figcaption>
+</figure>
+<!-- Article Body -->
+<div class="font-body-lg text-body-lg text-on-surface flex flex-col gap-stack-lg mt-stack-sm">
+<p>
+                    For the past decade, digital product design has been governed by rigid constraint systems. We built components, locked them into grids, and served the same static layouts to millions. However, as computational linguistics and generative models intersect with rendering engines, this paradigm is collapsing. We are entering the era of the fluid interface.
+                </p>
+<p>
+                    The modern application is no longer a collection of screens, but a semantic shell that generates contextually relevant tools on demand. This shift demands a radical rethinking of visual hierarchy, heavily relying on structural precision rather than ornamental design.
+                </p>
+<blockquote class="pl-stack-md border-l-2 border-primary font-headline-md text-headline-md italic text-on-surface-variant my-stack-sm py-2">
+                    "We are no longer designing screens; we are defining the boundaries within which the system is allowed to hallucinate a useful tool."
+                </blockquote>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-stack-md">The Death of the Nav Bar</h2>
+<p>
+                    When an interface can predict your intent, global navigation becomes a relic. Early indicators of this were seen in heavy command-palette utilization among developer tools, but 2026 has brought this to consumer platforms. The UI is now a vast, dark canvas interrupted only by 1px hairlines and precise typography when action is required.
+                </p>
+<div class="bg-surface-container p-stack-lg rounded-xl border border-outline-variant flex flex-col gap-stack-sm my-stack-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Core Principles of Fluid UI</span>
+<ul class="list-disc pl-5 font-body-md text-body-md text-on-surface-variant flex flex-col gap-2">
+<li><strong class="text-on-surface">Intent-driven rendering:</strong> Only show elements mathematically probable to be used.</li>
+<li><strong class="text-on-surface">Atmospheric depth:</strong> Replace heavy drop shadows with tonal layering and border highlights.</li>
+<li><strong class="text-on-surface">Typography as structure:</strong> Use scale and weight to define regions instead of containers.</li>
+</ul>
+</div>
+<p>
+                    The aesthetic result is quiet, confident, and inherently technical. It respects the user's focus, utilizing deep charcoal backgrounds and stark white or muted blue accents to guide the eye without overwhelming the senses.
+                </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mt-stack-lg pt-stack-lg border-t border-outline-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant border border-outline-variant px-3 py-1 rounded bg-surface-container-low">UI/UX</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant border border-outline-variant px-3 py-1 rounded bg-surface-container-low">Artificial Intelligence</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant border border-outline-variant px-3 py-1 rounded bg-surface-container-low">Design Systems</span>
+</div>
+</article>
+</main>
+<!-- Related Articles -->
+<section class="w-full px-gutter pb-section-gap">
+<div class="max-w-reading-width mx-auto">
+<div class="flex items-center justify-between mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Related Reading</h3>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">
+                    View Archive <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Card 1 -->
+<a class="group block border border-outline-variant rounded-xl p-stack-md bg-surface-container hover:bg-surface-container-high transition-colors" href="#">
+<div class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-widest">Architecture</div>
+<h4 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-tight">Beyond React: The Rise of Compiled Frameworks</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Analyzing the performance benefits of shifting away from virtual DOMs in highly complex enterprise applications.</p>
+</a>
+<!-- Card 2 -->
+<a class="group block border border-outline-variant rounded-xl p-stack-md bg-surface-container hover:bg-surface-container-high transition-colors" href="#">
+<div class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-widest">Policy</div>
+<h4 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-tight">Data Governance in Autonomous Systems</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">How new regulatory frameworks are enforcing strict audit trails on generative agents operating within financial sectors.</p>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface border-t border-outline-variant mt-auto">
+<div class="w-full px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="font-headline-md text-headline-md text-on-surface">LaraNews</div>
+<div class="flex flex-wrap justify-center gap-stack-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Archive</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 uppercase tracking-widest" href="#">Contact</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2026 LaraNews Editorial Platform. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

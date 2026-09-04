@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - r/Technology</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col lg:flex-row">
+<!-- SideNavBar -->
+<nav class="hidden lg:flex flex-col fixed left-0 top-16 bottom-0 w-64 pt-stack-lg bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant z-40">
+<div class="px-gutter mb-stack-lg">
+<h2 class="font-label text-label text-on-surface-variant uppercase tracking-wider mb-stack-sm">Communities</h2>
+<p class="font-metadata text-metadata text-outline">Explore Topics</p>
+</div>
+<ul class="flex flex-col gap-1 px-stack-sm flex-1">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="auto_awesome">auto_awesome</span>
+                    New
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded font-label text-label text-primary font-bold bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="local_fire_department">local_fire_department</span>
+                    Hot
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded font-label text-label text-on-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="trending_up">trending_up</span>
+                    Top
+                </a>
+</li>
+</ul>
+<div class="mt-auto border-t border-outline-variant p-stack-sm">
+<ul class="flex flex-col gap-1">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded font-metadata text-metadata text-on-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="settings">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded font-metadata text-metadata text-on-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-outline" data-icon="help">help</span>
+                        Help
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col lg:ml-64 w-full min-w-0">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full lg:w-[calc(100%-16rem)] z-50 flex justify-between items-center px-margin-mobile lg:px-margin-desktop h-16 bg-background dark:bg-background border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-gutter">
+<a class="font-display text-article-title-sm font-semibold text-primary dark:text-primary tracking-tight" href="#">LaraNews</a>
+<nav class="hidden md:flex gap-gutter ml-stack-lg">
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
+<a class="font-label text-label text-primary border-b-2 border-primary pb-1" href="#">Topics</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors" href="#">Discovery</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden sm:flex relative items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline" data-icon="search">search</span>
+<input class="bg-surface-container-low border border-outline-variant rounded-full py-1.5 pl-10 pr-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors w-48 lg:w-64" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 mt-16 pt-content-gap px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pb-section-gap max-w-[1200px] mx-auto w-full">
+<!-- Community Header -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row gap-stack-lg items-start md:items-end border-b border-outline-variant pb-stack-lg">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-high border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="A stylized, modern geometric logo representing technology and innovation. It uses a palette of deep blues and stark whites. The design is minimal, utilizing thin, crisp lines that form abstract circuitry patterns against a very dark background. The aesthetic is clean, premium, and futuristic, fitting for a high-end editorial tech publication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2oBdvAkk4EqkFWcs8rpn6vwKDu8TpCSskTJ3aQE_M1gp6syJBfdYYiOfQp39HtLaEimzaUASvdF_c8uVlzsEtYnij47qx5gOWA7FqUva6ZsOQfB-XE1j8JDphwfInropW-6JtCnmA1xdFBVm4wWHKywzeUTAqU6168TodrVSimhwssmejrkXjBitF2HWjlhS1kR2IAz-U3fB6gNF-ZSJ56K6UkWkfSTBtDGpbMajC4Tfl_Roy1fUQ"/>
+</div>
+<div class="flex-1">
+<h1 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface mb-stack-sm">r/Technology</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md max-w-3xl">The latest in tech news, innovations, and deep dives into the digital future. A community for developers, enthusiasts, and anyone curious about the cutting edge.</p>
+<div class="flex flex-wrap items-center gap-gutter font-metadata text-metadata">
+<span class="text-on-surface"><strong>2.4M</strong> Members</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 text-primary"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> <strong>12.5K</strong> Online</span>
+</div>
+</div>
+<div class="flex-shrink-0 mt-stack-md md:mt-0">
+<button class="bg-primary text-on-primary font-label text-label px-6 py-2 hover:bg-primary-fixed-dim transition-colors">Join</button>
+</div>
+</div>
+</section>
+<!-- Feed Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Feed -->
+<div class="lg:col-span-8 flex flex-col">
+<!-- Post 1 -->
+<article class="group flex gap-stack-md py-stack-lg border-b border-outline-variant last:border-0 hover:bg-surface/50 transition-colors -mx-4 px-4">
+<!-- Voting -->
+<div class="flex flex-col items-center gap-1 w-12 flex-shrink-0 pt-1">
+<button class="text-outline hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined" data-icon="keyboard_arrow_up">keyboard_arrow_up</span></button>
+<span class="font-metadata text-metadata text-on-surface font-semibold">14.2k</span>
+<button class="text-outline hover:text-error transition-colors cursor-pointer"><span class="material-symbols-outlined" data-icon="keyboard_arrow_down">keyboard_arrow_down</span></button>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-2 font-metadata text-metadata text-on-surface-variant">
+<span class="text-on-surface font-semibold">u/QuantumDev</span>
+<span class="text-outline-variant">•</span>
+<span>4 hours ago</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm group-hover:text-primary transition-colors cursor-pointer">Breakthrough in Solid-State Battery Tech Could Double EV Range</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-stack-md">Researchers at MIT have announced a new material synthesis process that overcomes previous limitations in solid-state lithium-ion batteries. This new approach not only promises to double energy density but also significantly reduces the risk of thermal runaway, potentially revolutionizing the automotive industry.</p>
+<div class="flex items-center gap-gutter font-metadata text-metadata text-outline">
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="chat_bubble">chat_bubble</span> 842 Comments</button>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="share">share</span> Share</button>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="bookmark">bookmark</span> Save</button>
+</div>
+</div>
+</article>
+<!-- Post 2 with Image -->
+<article class="group flex gap-stack-md py-stack-lg border-b border-outline-variant last:border-0 hover:bg-surface/50 transition-colors -mx-4 px-4">
+<div class="flex flex-col items-center gap-1 w-12 flex-shrink-0 pt-1">
+<button class="text-outline hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-primary filled-icon" data-icon="keyboard_arrow_up">keyboard_arrow_up</span></button>
+<span class="font-metadata text-metadata text-primary font-semibold">8.9k</span>
+<button class="text-outline hover:text-error transition-colors cursor-pointer"><span class="material-symbols-outlined" data-icon="keyboard_arrow_down">keyboard_arrow_down</span></button>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-2 font-metadata text-metadata text-on-surface-variant">
+<span class="text-on-surface font-semibold">u/SiliconValleyInsider</span>
+<span class="text-outline-variant">•</span>
+<span>6 hours ago</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded text-[11px] uppercase tracking-wider ml-2">Rumor</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm group-hover:text-primary transition-colors cursor-pointer">Leaked render shows next-gen AR glasses prototype from major tech player</h3>
+<div class="mb-stack-md w-full aspect-video bg-surface-container-high mt-4">
+<img class="w-full h-full object-cover" data-alt="A sleek, highly realistic rendering of futuristic augmented reality glasses resting on a minimal concrete surface. The glasses feature thin, matte black titanium frames and slightly tinted lenses reflecting a subtle blue neon light interface. The lighting is cinematic and moody, emphasizing a high-tech, premium aesthetic typical of cutting-edge hardware design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSBTXDgMo7X4uQD3kYUziScVsf6bmXGw52N2iR44sJsGmG_t1dnYLPUJLR3uMHHjiLD62wRsOCqxZw1iaCTHL46V3YjHTQ_Gd7lY7de2iDLKwlfG3K0Mhwvy_5JyvDkmb4TSjyPnqj8DZ8FtO8tx1jX4Gar1YrGg5S3ygeR7kt2qEtHoLEUzENodxTHLPJ8M5acQw5-7Pc4di4ap8nBvRE670wcIgnm4-kT1r1j1HJwC76c0eYYU4Y"/>
+</div>
+<div class="flex items-center gap-gutter font-metadata text-metadata text-outline">
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="chat_bubble">chat_bubble</span> 1.2k Comments</button>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="share">share</span> Share</button>
+</div>
+</div>
+</article>
+<!-- Post 3 -->
+<article class="group flex gap-stack-md py-stack-lg border-b border-outline-variant last:border-0 hover:bg-surface/50 transition-colors -mx-4 px-4">
+<div class="flex flex-col items-center gap-1 w-12 flex-shrink-0 pt-1">
+<button class="text-outline hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined" data-icon="keyboard_arrow_up">keyboard_arrow_up</span></button>
+<span class="font-metadata text-metadata text-on-surface font-semibold">5.4k</span>
+<button class="text-outline hover:text-error transition-colors cursor-pointer"><span class="material-symbols-outlined" data-icon="keyboard_arrow_down">keyboard_arrow_down</span></button>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-2 font-metadata text-metadata text-on-surface-variant">
+<span class="text-on-surface font-semibold">u/OpenSourceAdvocate</span>
+<span class="text-outline-variant">•</span>
+<span>8 hours ago</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm group-hover:text-primary transition-colors cursor-pointer">EU passes new right-to-repair legislation enforcing 10-year parts availability</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-stack-md">In a landmark decision, the European Parliament has overwhelmingly voted in favor of new regulations that will require manufacturers of consumer electronics to provide spare parts and repair manuals to independent repair shops and consumers for a minimum of ten years after a product's final sale date.</p>
+<div class="flex items-center gap-gutter font-metadata text-metadata text-outline">
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="chat_bubble">chat_bubble</span> 450 Comments</button>
+<button class="flex items-center gap-1 hover:text-on-surface transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px]" data-icon="share">share</span> Share</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar / About -->
+<aside class="hidden lg:block lg:col-span-4 pl-gutter border-l border-outline-variant">
+<div class="sticky top-24">
+<h4 class="font-section-title text-section-title text-on-surface mb-stack-md">About Community</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">A community dedicated to the news and discussions about the creation and use of technology and its surrounding issues.</p>
+<div class="border-t border-outline-variant py-stack-md mb-stack-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="font-metadata text-metadata text-outline">Created</span>
+<span class="font-metadata text-metadata text-on-surface">Jan 25, 2008</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-metadata text-metadata text-outline">Topic</span>
+<span class="font-metadata text-metadata text-on-surface">Technology</span>
+</div>
+</div>
+<h4 class="font-label text-label text-on-surface mb-stack-sm">Rules</h4>
+<ol class="list-decimal list-inside font-metadata text-metadata text-on-surface-variant space-y-2 mb-stack-lg">
+<li>Submissions must be primarily about technology.</li>
+<li>No image-only posts or memes.</li>
+<li>Titles must accurately represent the article.</li>
+<li>Be respectful to other users.</li>
+</ol>
+<button class="w-full border border-outline-variant text-on-surface font-label text-label py-2 hover:bg-surface-container-high transition-colors mb-stack-md">Create Post</button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background dark:bg-background border-t border-outline-variant flat no shadows">
+<div class="font-display text-label text-on-surface mb-4 md:mb-0">LaraNews</div>
+<div class="flex flex-wrap justify-center gap-gutter mb-4 md:mb-0">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Terms</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Archive</a>
+</div>
+<div class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant">© 2024 LaraNews Editorial. All rights reserved.</div>
+</footer>
+</div>
+</body></html>

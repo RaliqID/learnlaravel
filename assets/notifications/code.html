@@ -1,0 +1,190 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Notification Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e2e2e4",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "on-primary-fixed": "#00184a",
+                    "inverse-surface": "#e1e2ed",
+                    "on-tertiary": "#2f3037",
+                    "on-secondary-fixed-variant": "#454749",
+                    "on-primary-container": "#eeefff",
+                    "outline-variant": "#424655",
+                    "inverse-on-surface": "#2e3039",
+                    "secondary-container": "#454749",
+                    "tertiary-fixed": "#e2e1eb",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container-highest": "#32343d",
+                    "inverse-primary": "#0054d8",
+                    "on-secondary-fixed": "#1a1c1d",
+                    "on-surface-variant": "#c3c6d7",
+                    "secondary-fixed-dim": "#c6c6c8",
+                    "on-surface": "#e1e2ed",
+                    "tertiary": "#c6c6cf",
+                    "surface-container-lowest": "#0c0e16",
+                    "surface-bright": "#373942",
+                    "outline": "#8d90a1",
+                    "tertiary-container": "#6c6d75",
+                    "tertiary-fixed-dim": "#c6c6cf",
+                    "on-secondary": "#2f3132",
+                    "on-primary": "#002a76",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "on-background": "#e1e2ed",
+                    "on-tertiary-container": "#f1f0fa",
+                    "surface-dim": "#11131b",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "surface": "#11131b",
+                    "primary-container": "#1d63ed",
+                    "surface-variant": "#32343d",
+                    "on-secondary-container": "#b4b5b7",
+                    "on-error-container": "#ffdad6",
+                    "background": "#11131b",
+                    "surface-container": "#1d1f28",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "primary": "#b3c5ff",
+                    "surface-container-high": "#272a32",
+                    "surface-container-low": "#191b23",
+                    "surface-tint": "#b3c5ff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "secondary": "#c6c6c8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "content-gap": "48px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-tablet": "40px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "80px",
+                    "stack-md": "16px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "metadata": ["Geist"],
+                    "display": ["Geist"],
+                    "label": ["Geist"],
+                    "page-title-mobile": ["Geist"],
+                    "article-title-lg": ["Geist"],
+                    "article-title-mobile": ["Geist"],
+                    "page-title": ["Geist"],
+                    "article-title-sm": ["Geist"],
+                    "body-lg": ["Geist"],
+                    "body-md": ["Geist"],
+                    "section-title": ["Geist"]
+            },
+            "fontSize": {
+                    "metadata": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "label": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "page-title-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "article-title-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "article-title-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "page-title": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "article-title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "section-title": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background border-b border-outline-variant">
+<div class="flex items-center gap-stack-lg">
+<span class="font-display text-article-title-sm font-semibold text-primary">LaraNews</span>
+<nav class="hidden md:flex gap-stack-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer hover:text-primary transition-all duration-200 font-label text-label" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer hover:text-primary transition-all duration-200 font-label text-label" href="#">Topics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer hover:text-primary transition-all duration-200 font-label text-label" href="#">Discovery</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="text-primary cursor-pointer active:opacity-70 transition-opacity flex items-center justify-center p-2 rounded-full relative hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full border border-background"></span>
+</button>
+<button class="text-primary dark:text-primary cursor-pointer active:opacity-70 transition-opacity flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
+<header class="mb-content-gap">
+<h1 class="font-page-title text-page-title mb-stack-sm">Notifications</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Stay updated with your latest interactions.</p>
+</header>
+<!-- Filters -->
+<nav class="flex gap-stack-md mb-content-gap overflow-x-auto pb-4 no-scrollbar border-b border-outline-variant">
+<button class="font-label text-label text-primary border-b-2 border-primary pb-1 shrink-0 px-2">All</button>
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors shrink-0 px-2 pb-1">Mentions</button>
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors shrink-0 px-2 pb-1">Replies</button>
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors shrink-0 px-2 pb-1">Followers</button>
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors shrink-0 px-2 pb-1">Community</button>
+</nav>
+<!-- Notification List -->
+<div class="flex flex-col">
+<!-- Unread Item -->
+<div class="relative py-stack-lg border-b border-outline-variant flex gap-stack-md items-start group hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-lg cursor-pointer"><div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1/2 bg-primary rounded-r-full"></div><div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 overflow-hidden"><span class="material-symbols-outlined text-primary">person_add</span></div><div class="flex-1"><p class="font-body-md text-body-md text-on-surface"><span class="font-semibold text-primary">Elena Rostova</span> followed you</p><p class="font-metadata text-metadata text-on-surface-variant mt-1">2 hours ago</p></div></div>
+<!-- Read Item -->
+<div class="relative py-stack-lg border-b border-outline-variant flex gap-stack-md items-start group hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-lg cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 overflow-hidden">
+<span class="material-symbols-outlined text-on-surface-variant">chat_bubble</span>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface"><span class="font-semibold">Sarah Jenkins</span> replied to your post <span class="italic text-on-surface-variant">"The Future of Minimalist UI"</span></p>
+<p class="font-metadata text-metadata text-on-surface-variant mt-1">5 hours ago</p>
+</div>
+</div>
+<!-- Read Item -->
+<div class="relative py-stack-lg border-b border-outline-variant flex gap-stack-md items-start group hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-lg cursor-pointer"><div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 overflow-hidden"><span class="material-symbols-outlined text-on-surface-variant">alternate_email</span></div><div class="flex-1"><p class="font-body-md text-body-md text-on-surface"><span class="font-semibold">Tech Insider</span> mentioned you in <span class="font-semibold text-primary">r/Technology</span></p><p class="font-metadata text-metadata text-on-surface-variant mt-1">Yesterday</p></div></div>
+<!-- Read Item -->
+<div class="relative py-stack-lg border-b border-outline-variant flex gap-stack-md items-start group hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-lg cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 overflow-hidden">
+<span class="material-symbols-outlined text-on-surface-variant">group</span>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface">New trending topic in <span class="font-semibold">UI/UX Community</span></p>
+<p class="font-metadata text-metadata text-on-surface-variant mt-1">2 days ago</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background border-t border-outline-variant">
+<span class="font-display text-label text-on-surface mb-stack-md md:mb-0">LaraNews</span>
+<div class="flex flex-wrap justify-center gap-stack-md mb-stack-md md:mb-0">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Privacy</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Terms</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80 transition-opacity" href="#">Archive</a>
+</div>
+<span class="font-metadata text-metadata text-on-surface-variant">© 2024 LaraNews Editorial. All rights reserved.</span>
+</footer>
+
+
+</body></html>

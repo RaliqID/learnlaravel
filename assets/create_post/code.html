@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Create Post</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e2e2e4",
+                      "on-tertiary-fixed-variant": "#45464e",
+                      "on-primary-fixed": "#00184a",
+                      "inverse-surface": "#e1e2ed",
+                      "on-tertiary": "#2f3037",
+                      "on-secondary-fixed-variant": "#454749",
+                      "on-primary-container": "#eeefff",
+                      "outline-variant": "#424655",
+                      "inverse-on-surface": "#2e3039",
+                      "secondary-container": "#454749",
+                      "tertiary-fixed": "#e2e1eb",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-container-highest": "#32343d",
+                      "inverse-primary": "#0054d8",
+                      "on-secondary-fixed": "#1a1c1d",
+                      "on-surface-variant": "#c3c6d7",
+                      "secondary-fixed-dim": "#c6c6c8",
+                      "on-surface": "#e1e2ed",
+                      "tertiary": "#c6c6cf",
+                      "surface-container-lowest": "#0c0e16",
+                      "surface-bright": "#373942",
+                      "outline": "#8d90a1",
+                      "tertiary-container": "#6c6d75",
+                      "tertiary-fixed-dim": "#c6c6cf",
+                      "on-secondary": "#2f3132",
+                      "on-primary": "#002a76",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed": "#1a1b22",
+                      "on-background": "#e1e2ed",
+                      "on-tertiary-container": "#f1f0fa",
+                      "surface-dim": "#11131b",
+                      "on-primary-fixed-variant": "#003fa5",
+                      "surface": "#11131b",
+                      "primary-container": "#1d63ed",
+                      "surface-variant": "#32343d",
+                      "on-secondary-container": "#b4b5b7",
+                      "on-error-container": "#ffdad6",
+                      "background": "#11131b",
+                      "surface-container": "#1d1f28",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "primary": "#b3c5ff",
+                      "surface-container-high": "#272a32",
+                      "surface-container-low": "#191b23",
+                      "surface-tint": "#b3c5ff",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "secondary": "#c6c6c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "content-gap": "48px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-tablet": "40px",
+                      "stack-sm": "8px",
+                      "margin-desktop": "80px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px"
+              },
+              "fontFamily": {
+                      "metadata": ["Geist"],
+                      "display": ["Geist"],
+                      "label": ["Geist"],
+                      "page-title-mobile": ["Geist"],
+                      "article-title-lg": ["Geist"],
+                      "article-title-mobile": ["Geist"],
+                      "page-title": ["Geist"],
+                      "article-title-sm": ["Geist"],
+                      "body-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "section-title": ["Geist"]
+              },
+              "fontSize": {
+                      "metadata": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "display": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                      "label": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "page-title-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "article-title-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "article-title-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "page-title": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "article-title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "section-title": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Editor Styles */
+        .editor-content:empty:before {
+            content: attr(data-placeholder);
+            color: theme('colors.on-surface-variant');
+            pointer-events: none;
+            display: block; /* For Firefox */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-background border-b border-outline-variant flat no shadows">
+<!-- Left: Brand & Nav -->
+<div class="flex items-center gap-gutter">
+<a class="font-display text-article-title-sm font-semibold text-primary" href="#">LaraNews</a>
+<nav class="hidden md:flex items-center gap-stack-lg ml-stack-lg">
+<!-- Assuming Create Post is an action from anywhere, not a primary navigation destination. 
+                     Therefore, none of the top-level nav links are 'active' by default here unless it implies a section.
+                     We will leave them inactive for the creation flow to keep focus. -->
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Topics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Discovery</a>
+</nav>
+</div>
+<!-- Right: Actions -->
+<div class="flex items-center gap-stack-md text-primary">
+<button aria-label="Search" class="hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Notifications" class="hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button aria-label="Profile" class="hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<!-- Editorial Grid: Centered Reading Lane for composition -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop flex justify-center w-full">
+<div class="w-full max-w-[800px] flex flex-col gap-content-gap">
+<!-- Page Header -->
+<div class="flex flex-col gap-stack-sm">
+<h1 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface">Create a Post</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Share insights, links, or start a discussion.</p>
+</div>
+<!-- Form Container -->
+<form class="flex flex-col gap-content-gap">
+<!-- Community Selector (Minimalist Input Style) -->
+<div class="flex flex-col gap-stack-sm relative">
+<label class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider" for="community-select">Community</label>
+<div class="relative group">
+<select class="w-full appearance-none bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-lg text-body-lg text-on-surface cursor-pointer transition-colors outline-none rounded-none" id="community-select">
+<option class="bg-surface-container text-on-surface-variant" disabled="" selected="" value="">Select a community...</option>
+<option class="bg-surface-container text-on-surface" value="tech">Technology</option>
+<option class="bg-surface-container text-on-surface" value="design">Design &amp; UX</option>
+<option class="bg-surface-container text-on-surface" value="science">Science</option>
+<option class="bg-surface-container text-on-surface" value="world">World News</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- Post Title -->
+<div class="flex flex-col gap-stack-sm">
+<label class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider" for="post-title">Title</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-article-title-lg text-article-title-lg text-on-surface placeholder:text-on-surface-variant/50 transition-colors outline-none rounded-none" id="post-title" placeholder="An interesting title" required="" type="text"/>
+</div>
+<!-- Post Body (Rich Text Area Placeholder) -->
+<div class="flex flex-col gap-stack-sm h-full min-h-[300px]">
+<div class="flex justify-between items-end border-b border-outline-variant pb-2">
+<label class="font-metadata text-metadata text-on-surface-variant uppercase tracking-wider">Body</label>
+<!-- Formatting Toolbar (Minimal) -->
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button class="p-1 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Bold" type="button"><span class="material-symbols-outlined text-[20px]">format_bold</span></button>
+<button class="p-1 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Italic" type="button"><span class="material-symbols-outlined text-[20px]">format_italic</span></button>
+<div class="w-[1px] h-4 bg-outline-variant mx-1"></div>
+<button class="p-1 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Add Link" type="button"><span class="material-symbols-outlined text-[20px]">link</span></button>
+<button class="p-1 hover:text-primary hover:bg-surface-container rounded transition-colors" title="Add Image" type="button"><span class="material-symbols-outlined text-[20px]">image</span></button>
+</div>
+</div>
+<!-- Content Editable Area -->
+<div class="w-full flex-grow bg-transparent border-0 focus:ring-0 px-0 py-4 font-body-lg text-body-lg text-on-surface outline-none resize-none editor-content" contenteditable="true" data-placeholder="What are your thoughts?"></div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-stack-md pt-content-gap mt-auto border-t border-outline-variant">
+<button class="px-6 py-3 font-label text-label text-on-surface-variant hover:text-on-surface transition-colors rounded-none border border-transparent hover:border-outline-variant" type="button">Cancel</button>
+<!-- Primary Button Style from Guidelines: solid brand blue with white text, strictly rectangular -->
+<button class="px-8 py-3 font-label text-label bg-primary-container text-on-primary-container hover:bg-inverse-primary hover:text-on-primary-container transition-colors rounded-none shadow-sm flex items-center gap-2" type="submit">
+                        Post
+                        <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background border-t border-outline-variant flat no shadows">
+<div class="font-display text-label text-on-surface mb-stack-md md:mb-0">LaraNews</div>
+<nav class="flex flex-wrap justify-center gap-stack-md mb-stack-md md:mb-0">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Terms</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Archive</a>
+</nav>
+<div class="font-metadata text-metadata text-on-surface-variant">© 2024 LaraNews Editorial. All rights reserved.</div>
+</footer>
+<script>
+        // Simple script to handle contenteditable placeholder behavior if needed beyond CSS
+        const editor = document.querySelector('.editor-content');
+        editor.addEventListener('focus', function() {
+            if(this.innerHTML.trim() === '<br>') this.innerHTML = '';
+        });
+    </script>
+</body></html>

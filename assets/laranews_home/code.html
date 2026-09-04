@@ -1,0 +1,387 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#2e3039",
+                      "surface-dim": "#11131b",
+                      "on-tertiary-fixed-variant": "#45464e",
+                      "on-primary-fixed": "#00184a",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "background": "#11131b",
+                      "on-secondary-fixed": "#1a1c1d",
+                      "on-secondary": "#2f3132",
+                      "on-tertiary-fixed": "#1a1b22",
+                      "secondary-fixed-dim": "#c6c6c8",
+                      "secondary": "#c6c6c8",
+                      "primary": "#b3c5ff",
+                      "on-secondary-container": "#b4b5b7",
+                      "secondary-container": "#454749",
+                      "on-error": "#690005",
+                      "primary-container": "#1d63ed",
+                      "surface": "#11131b",
+                      "surface-container-highest": "#32343d",
+                      "on-surface": "#e1e2ed",
+                      "on-primary": "#002a76",
+                      "on-background": "#e1e2ed",
+                      "outline-variant": "#424655",
+                      "inverse-surface": "#e1e2ed",
+                      "tertiary-container": "#6c6d75",
+                      "on-surface-variant": "#c3c6d7",
+                      "surface-bright": "#373942",
+                      "on-primary-container": "#eeefff",
+                      "on-tertiary": "#2f3037",
+                      "surface-container-lowest": "#0c0e16",
+                      "surface-variant": "#32343d",
+                      "secondary-fixed": "#e2e2e4",
+                      "on-secondary-fixed-variant": "#454749",
+                      "tertiary-fixed-dim": "#c6c6cf",
+                      "on-tertiary-container": "#f1f0fa",
+                      "surface-container": "#1d1f28",
+                      "error": "#ffb4ab",
+                      "outline": "#8d90a1",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-tint": "#b3c5ff",
+                      "inverse-primary": "#0054d8",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#003fa5",
+                      "surface-container-low": "#191b23",
+                      "tertiary-fixed": "#e2e1eb",
+                      "tertiary": "#c6c6cf",
+                      "error-container": "#93000a",
+                      "surface-container-high": "#272a32"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-tablet": "40px",
+                      "stack-sm": "8px",
+                      "section-gap": "120px",
+                      "stack-md": "16px",
+                      "content-gap": "48px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px",
+                      "stack-lg": "24px"
+              },
+              "fontFamily": {
+                      "article-title-mobile": [
+                              "Geist"
+                      ],
+                      "label": [
+                              "Geist"
+                      ],
+                      "article-title-sm": [
+                              "Geist"
+                      ],
+                      "article-title-lg": [
+                              "Geist"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Geist"
+                      ],
+                      "page-title-mobile": [
+                              "Geist"
+                      ],
+                      "metadata": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "section-title": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "article-title-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "article-title-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "article-title-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "page-title": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "26px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "metadata": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "30px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "section-title": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          body { font-family: 'Geist', sans-serif; }
+          .reading-progress {
+              position: fixed;
+              top: 0;
+              left: 0;
+              height: 2px;
+              background-color: #b3c5ff; /* primary */
+              width: 0%;
+              z-index: 50;
+              transition: width 0.1s ease-out;
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<div class="reading-progress" id="progress-bar"></div>
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-40 sticky">
+<div class="max-w-desktop mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand -->
+<div class="flex items-center gap-4">
+<a class="font-page-title-mobile text-page-title-mobile font-bold text-on-background dark:text-on-background tracking-tighter" href="#">LaraNews</a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Topics</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center border-b border-outline-variant focus-within:border-primary transition-colors pb-1">
+<span class="material-symbols-outlined text-on-surface-variant mr-2 text-sm">search</span>
+<input class="bg-transparent border-none outline-none text-body-md font-body-md text-on-background placeholder-on-surface-variant p-0 w-32 focus:ring-0" placeholder="Search..." type="text">
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-desktop mx-auto px-margin-mobile md:px-margin-desktop py-content-gap md:py-section-gap">
+<!-- Editorial Intro -->
+<div class="mb-content-gap">
+<h1 class="font-display text-display text-on-background mb-stack-sm md:w-2/3">What's happening today.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A curated selection of the most critical stories across technology, culture, and design.</p>
+</div>
+<!-- Layout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Primary Story (Left Lane, 8 Cols) -->
+<div class="md:col-span-8 flex flex-col gap-stack-lg border-b md:border-b-0 md:border-r border-outline-variant pb-content-gap md:pb-0 md:pr-gutter">
+<article class="flex flex-col gap-stack-md group cursor-pointer">
+<div class="w-full aspect-[16/9] overflow-hidden bg-surface-container relative">
+<img alt="Main story image" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A sophisticated, high-contrast black and white photograph showing a modern architectural space with sharp geometric lines and soft, natural light filtering through tall windows. The mood is calm, intellectual, and professional, perfectly suited for a premium digital publication. Minimalist composition with subtle textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATSn6vERstYB9jj5Rb8XWkgzedHTnOom-OIDitSqDfom8a5hLPqrNcabRaHPrxy3b3xadxT062xnBVpE8FQp50hbkF6PSRY1mTInfscrPmvQVHHTKZhEyJbKhIQoNkEmC1IKxPC_Djkx3_1Blej3UTVE7falwVDyloRnR8CtEAnhjzFDMlC0CyYwWVIWeHTK_gAcK7DmFzIX7ArGoSp-JR63HY52Q_nB45S9nuJgEdncT5FUeFAfS_">
+</div>
+<div class="flex flex-col gap-stack-sm mt-stack-sm">
+<div class="flex items-center gap-3 font-metadata text-metadata text-primary uppercase tracking-widest">
+<span class="">Technology</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-on-surface-variant">4 min read</span>
+</div>
+<h2 class="font-article-title-lg text-article-title-lg text-on-background group-hover:text-primary transition-colors duration-300">The Future of Asynchronous Systems in Modern Web Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Exploring how event-driven patterns and non-blocking I/O are redefining performance benchmarks for the next generation of distributed applications.</p>
+<div class="font-metadata text-metadata text-on-surface-variant mt-stack-sm flex items-center gap-2">
+<span class="">By Elena Rostova</span>
+<span class="w-[1px] h-3 bg-outline-variant"></span>
+<span class="">Oct 24, 2024</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Secondary & Trending (Right Lane, 4 Cols) -->
+<div class="md:col-span-4 flex flex-col gap-content-gap">
+<!-- Trending Compact List -->
+<section>
+<div class="flex items-center gap-2 mb-stack-md border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+<h3 class="font-label text-label text-on-surface uppercase tracking-wider">Trending</h3>
+</div>
+<div class="flex flex-col">
+<a class="py-stack-md border-b border-outline-variant group hover:bg-surface-container/30 transition-colors" href="#">
+<span class="font-metadata text-metadata text-primary mb-1 block">01</span>
+<h4 class="font-body-md text-body-md text-on-background group-hover:text-primary transition-colors">The Impact of Edge Computing on Real-Time Data Processing</h4>
+</a>
+<a class="py-stack-md border-b border-outline-variant group hover:bg-surface-container/30 transition-colors" href="#">
+<span class="font-metadata text-metadata text-primary mb-1 block">02</span>
+<h4 class="font-body-md text-body-md text-on-background group-hover:text-primary transition-colors">Sustainable Urbanism: Rethinking the Modern Smart City</h4>
+</a>
+<a class="py-stack-md border-b border-outline-variant group hover:bg-surface-container/30 transition-colors" href="#">
+<span class="font-metadata text-metadata text-primary mb-1 block">03</span>
+<h4 class="font-body-md text-body-md text-on-background group-hover:text-primary transition-colors">Cybersecurity Protocols in the Age of Quantum Supremacy</h4>
+</a>
+</div>
+</section>
+<!-- Topics Selection -->
+<section>
+<div class="flex items-center gap-2 mb-stack-md border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary text-sm">category</span>
+<h3 class="font-label text-label text-on-surface uppercase tracking-wider">Explore Topics</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-metadata text-metadata transition-colors" href="#">r/Architecture</a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-metadata text-metadata transition-colors" href="#">r/DigitalCulture</a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-metadata text-metadata transition-colors" href="#">r/Technology</a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-metadata text-metadata transition-colors" href="#">Business</a>
+<a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-metadata text-metadata transition-colors" href="#">Science</a>
+</div>
+</section>
+</div>
+</div>
+<!-- Latest Section (Generous Spacing) -->
+<section class="mt-section-gap">
+<h3 class="font-section-title text-section-title text-on-background mb-content-gap border-b border-outline-variant pb-stack-sm inline-block">Latest Dispatches</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Article 1 -->
+<article class="flex flex-col gap-stack-md group cursor-pointer border-t border-outline-variant pt-stack-md">
+<div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative mb-stack-sm">
+<img alt="Article image" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A minimalist overhead shot of an espresso cup next to a beautifully bound notebook on a dark slate table. Soft, dramatic lighting emphasizing textures. Monochromatic palette with a hint of warm brown. Premium editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHp5Dop9oGxNB9KTQkZcBtFYWj_RqhlkJsY4vEerIWLsAd1kVlXOmv2_kFNgAHlwbm7Z-m8AcH1kLCvlYSdbRDTJTW1M1uqXwKObIhrrbH86dHQBffXJbmxui1_BKIQSFYBJsMDwsOm6Pv6MrQ27lpb2u_qJ-hgevOjWAmf6GX8sQUxEbxPZ9GA_H8NwgPtln6CKYi7beUzf2zeobZKn_QXXSw66jYZxsDvxnjhcVyAFxGXr8agpQ7">
+</div>
+<div class="font-metadata text-metadata text-primary uppercase tracking-widest">Culture</div>
+<h4 class="font-article-title-sm text-article-title-sm text-on-background group-hover:text-primary transition-colors">The Return of Analog Rituals in a Digital World</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Why younger generations are abandoning digital convenience for the tangible satisfaction of vinyl, film cameras, and physical journals.</p>
+</article>
+<!-- Article 2 -->
+<article class="flex flex-col gap-stack-md group cursor-pointer border-t border-outline-variant pt-stack-md">
+<div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative mb-stack-sm">
+<img alt="Article image" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Abstract macro photography of complex, layered glass structures reflecting cold blue and stark white light. Tech-noir aesthetic, sharp focus, highly detailed, evoking a sense of deep data and modern computing. Dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzDPJDmq0WrtJEG3r6t8t3J0lY3abUf7ymYEDHCSZQ97KwSDDIJ5TeQDWnQ_tWsn9AUtkZm5hDkq1gHij-XkeIBbrG7m8UDl5ayWs_CEcqnZ6tVqczHm3pzAJnBlZzK-2L5nt0Jqaaa0iOhgYLYxvP4PCJlN23D2JbzG7NxH2i4lRDulaOEaYVJtWK0dr-VGYnryexD-Qvau15zrxFX3qBwQuM-55WkNYe2gfy_HDMSN3FVCj9-Jsi">
+</div>
+<div class="font-metadata text-metadata text-primary uppercase tracking-widest">Technology</div>
+<h4 class="font-article-title-sm text-article-title-sm text-on-background group-hover:text-primary transition-colors">Quantum Computing: Moving Beyond the Hype</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Separating theoretical breakthroughs from practical applications in the next decade of computational science.</p>
+</article>
+<!-- Article 3 -->
+<article class="flex flex-col gap-stack-md group cursor-pointer border-t border-outline-variant pt-stack-md">
+<div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative mb-stack-sm">
+<img alt="Article image" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A solitary figure standing on a massive, brutalist concrete structure looking out over a misty, minimalist landscape. Desaturated colors, deep shadows, high contrast. Cinematic and contemplative editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmtPiUnTonZjM3draqpOAqQ0JqsAB2qJT9NQV7NMXLAMO_u64A5TH4FjECC0-Y1CZ9PmE1XPkMrCQIDseNfAf-GPaPph_5WSpTAyGPPijG2eyq1G3Vocn7LfRbbqWkNiXVuBOy66GUbqwq_EyV71TwZ3XfrrXKe4mqmM45QBs8saInPieIuvucS5TdLNVGxQmXdldT5_A5I7ultmeLJB0wRhaz6pfn-fz8z-Kieibbq9qRGYv-WJhR">
+</div>
+<div class="font-metadata text-metadata text-primary uppercase tracking-widest">Society</div>
+<h4 class="font-article-title-sm text-article-title-sm text-on-background group-hover:text-primary transition-colors">Designing for Solitude in Megacities</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Architectural strategies for creating quiet, reflective spaces amidst the constant noise of urban environments.</p>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container w-full mt-section-gap border-t border-outline-variant dark:border-outline-variant">
+<div class="max-w-desktop mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-center gap-gutter transition-all duration-300">
+<div class="font-article-title-sm text-article-title-sm text-on-surface dark:text-on-surface font-bold tracking-tight">
+                LaraNews
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all duration-300" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all duration-300" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all duration-300" href="#">Newsletter</a>
+</nav>
+<div class="font-metadata text-metadata text-on-surface-variant">
+                © 2024 LaraNews. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple scroll progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        });
+    </script>
+
+
+</body></html>

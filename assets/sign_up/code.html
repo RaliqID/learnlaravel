@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Create Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .form-input:focus {
+            border-bottom-color: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Left side: Form -->
+<main class="w-full md:w-1/2 lg:w-5/12 xl:w-1/3 flex flex-col justify-center px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-stack-lg z-10 bg-background relative shrink-0">
+<div class="mb-section-gap absolute top-stack-lg left-margin-mobile md:left-margin-tablet lg:left-margin-desktop">
+<a class="font-display text-article-title-sm font-semibold text-primary inline-flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+                LaraNews
+             </a>
+</div>
+<div class="w-full max-w-sm mx-auto mt-24 md:mt-0">
+<h1 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface mb-stack-sm">Join the Conversation</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-content-gap">Create an account to access premium editorial content and participate in discussions.</p>
+<form class="space-y-stack-lg w-full">
+<div class="flex flex-col md:flex-row gap-stack-md w-full">
+<div class="flex-1 group relative">
+<label class="font-metadata text-metadata text-on-surface-variant block mb-1" for="firstName">First Name</label>
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors" id="firstName" name="firstName" required="" type="text"/>
+</div>
+<div class="flex-1 group relative">
+<label class="font-metadata text-metadata text-on-surface-variant block mb-1" for="lastName">Last Name</label>
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors" id="lastName" name="lastName" required="" type="text"/>
+</div>
+</div>
+<div class="group relative">
+<label class="font-metadata text-metadata text-on-surface-variant flex justify-between mb-1" for="username">
+<span>Username</span>
+</label>
+<div class="relative">
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors peer" id="username" name="username" placeholder="@" required="" type="text"/>
+</div>
+</div>
+<div class="group relative">
+<label class="font-metadata text-metadata text-on-surface-variant block mb-1" for="email">Email Address</label>
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors" id="email" name="email" required="" type="email"/>
+</div>
+<div class="group relative">
+<label class="font-metadata text-metadata text-on-surface-variant block mb-1" for="password">Password</label>
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors" id="password" name="password" required="" type="password"/>
+</div>
+<div class="group relative">
+<label class="font-metadata text-metadata text-on-surface-variant block mb-1" for="confirmPassword">Confirm Password</label>
+<input class="form-input w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface transition-colors" id="confirmPassword" name="confirmPassword" required="" type="password"/>
+</div>
+<button class="w-full bg-primary text-on-primary font-label text-label py-4 hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-2 mt-stack-lg group" type="submit">
+<span>Create Account</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<div class="mt-stack-lg text-center">
+<p class="font-metadata text-metadata text-on-surface-variant">
+                    Already have an account? 
+                    <a class="text-primary hover:text-primary-fixed transition-colors font-medium ml-1" href="#">Sign in</a>
+</p>
+</div>
+<div class="mt-stack-lg text-center">
+<p class="font-metadata text-metadata text-on-surface-variant opacity-70">
+                    By creating an account, you agree to our <a class="underline hover:text-on-surface" href="#">Terms of Service</a> and <a class="underline hover:text-on-surface" href="#">Privacy Policy</a>.
+                </p>
+</div>
+</div>
+</main>
+<!-- Right side: Cinematic Image -->
+<aside class="hidden md:block w-1/2 lg:w-7/12 xl:w-2/3 fixed right-0 top-0 h-screen bg-surface-container-lowest overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-luminosity grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A striking, moody cinematic photograph of a printing press in operation, captured with low-key lighting. The scene is dominated by deep blacks and rich indigo hues, characteristic of a premium dark-mode editorial aesthetic. Shafts of soft, cool light cut through the ambient darkness, highlighting the intricate mechanical details and freshly printed broadsheets. The atmosphere is intellectual, quiet, and profoundly sophisticated, conveying the timeless weight of journalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpE15GivvW2t49z4wET-ge85UGUlMydL_-MX8wcJs8Qq1UT6ND3VDX65PKeVku3hcquxfgUyFJ3aGzzCz-fW92rVkwm_mLb0kOzNXa1og-Pkt6HnRFY-Ayt8wsQshkRWEdMFuMQixZzrRg6ziX9EVzjFPMsOmlNRVHylFYi0Prmlicm09onOGoR0tKl5UCXir5enKbWua4l6Eq70phP6sDhMjCmUB9GqzRuBaeeXcBikvt0QZxR5z8')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent"></div>
+<div class="absolute bottom-margin-desktop left-margin-desktop right-margin-desktop max-w-2xl">
+<h2 class="font-article-title-lg text-article-title-lg text-on-surface mb-stack-md leading-tight">"Information is the oxygen of the modern age."</h2>
+<p class="font-metadata text-metadata text-on-surface-variant uppercase tracking-widest">— The Editorial Board</p>
+</div>
+</aside>
+</body></html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Welcome</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts (Geist is referenced in config, mapping to sans for fallback if not available natively, but assuming system resolves it based on instructions) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#2e3039",
+                    "surface-dim": "#11131b",
+                    "on-tertiary-fixed-variant": "#45464e",
+                    "on-primary-fixed": "#00184a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "background": "#11131b",
+                    "on-secondary-fixed": "#1a1c1d",
+                    "on-secondary": "#2f3132",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "secondary-fixed-dim": "#c6c6c8",
+                    "secondary": "#c6c6c8",
+                    "primary": "#b3c5ff",
+                    "on-secondary-container": "#b4b5b7",
+                    "secondary-container": "#454749",
+                    "on-error": "#690005",
+                    "primary-container": "#1d63ed",
+                    "surface": "#11131b",
+                    "surface-container-highest": "#32343d",
+                    "on-surface": "#e1e2ed",
+                    "on-primary": "#002a76",
+                    "on-background": "#e1e2ed",
+                    "outline-variant": "#424655",
+                    "inverse-surface": "#e1e2ed",
+                    "tertiary-container": "#6c6d75",
+                    "on-surface-variant": "#c3c6d7",
+                    "surface-bright": "#373942",
+                    "on-primary-container": "#eeefff",
+                    "on-tertiary": "#2f3037",
+                    "surface-container-lowest": "#0c0e16",
+                    "surface-variant": "#32343d",
+                    "secondary-fixed": "#e2e2e4",
+                    "on-secondary-fixed-variant": "#454749",
+                    "tertiary-fixed-dim": "#c6c6cf",
+                    "on-tertiary-container": "#f1f0fa",
+                    "surface-container": "#1d1f28",
+                    "error": "#ffb4ab",
+                    "outline": "#8d90a1",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-tint": "#b3c5ff",
+                    "inverse-primary": "#0054d8",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "surface-container-low": "#191b23",
+                    "tertiary-fixed": "#e2e1eb",
+                    "tertiary": "#c6c6cf",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#272a32"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-tablet": "40px",
+                    "stack-sm": "8px",
+                    "section-gap": "120px",
+                    "stack-md": "16px",
+                    "content-gap": "48px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "article-title-mobile": ["Geist", "sans-serif"],
+                    "label": ["Geist", "sans-serif"],
+                    "article-title-sm": ["Geist", "sans-serif"],
+                    "article-title-lg": ["Geist", "sans-serif"],
+                    "page-title": ["Geist", "sans-serif"],
+                    "body-md": ["Geist", "sans-serif"],
+                    "page-title-mobile": ["Geist", "sans-serif"],
+                    "metadata": ["Geist", "sans-serif"],
+                    "body-lg": ["Geist", "sans-serif"],
+                    "display": ["Geist", "sans-serif"],
+                    "section-title": ["Geist", "sans-serif"]
+            },
+            "fontSize": {
+                    "article-title-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "article-title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "article-title-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "page-title": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "page-title-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "metadata": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "display": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "section-title": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            /* Applying base font as fallback */
+            font-family: 'Geist', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop antialiased">
+<!-- Navigation shell is suppressed per rules for "Welcome/Splash" screens -->
+<main class="w-full max-w-3xl flex flex-col items-center text-center animate-[fadeIn_1s_ease-out]">
+<!-- Brand Cluster -->
+<div class="flex flex-col items-center mb-section-gap">
+<!-- Logo -->
+<div class="mb-stack-lg">
+<img class="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-2xl opacity-90 hover:opacity-100 transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8EOrbHLFa0KgqVNbLZGAMEvTzOHBElaq3z46Wp0xXFnqdRgZpNQXHZm2mvIsPUKirashdQB3y7rak5uAeFi96RdhnS-tcEn-gXh-1mkXrPN2vvmj7Z-S8QwXaQJgiX2Zw8A-QsiWnkvGIwjwPIMZ3SrnAh7crzlFT0tHBMDUonnLPrzL9Fg3MjoBeuUpn75zwRuijX4Qfnw3MREnbsUeifuI7v39qP5K3rjNhB_4ikmyxAr16zrXh-kyQVNTb2OdPGw">
+</div>
+<!-- Wordmark -->
+<h1 class="font-display text-display text-on-background mb-stack-sm tracking-tighter">
+                LaraNews
+            </h1>
+<!-- Tagline -->
+<p class="font-article-title-sm text-article-title-sm text-on-surface-variant max-w-md">
+                Stay informed. Think deeper.
+            </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row gap-gutter w-full max-w-md mx-auto">
+<!-- Primary CTA -->
+<button class="flex-1 bg-primary-container text-on-primary-container font-label text-label h-14 flex items-center justify-center transition-colors duration-300 hover:bg-inverse-primary focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-background">
+                Explore LaraNews
+            </button>
+<!-- Secondary Action -->
+<button class="flex-1 bg-transparent border border-on-background text-on-background font-label text-label h-14 flex items-center justify-center transition-colors duration-300 hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-on-background focus:ring-offset-2 focus:ring-offset-background">
+                Sign in
+            </button>
+</div>
+</main>
+<style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body></html>

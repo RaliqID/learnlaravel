@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews - Global Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e2e2e4",
+                      "on-tertiary-fixed-variant": "#45464e",
+                      "on-primary-fixed": "#00184a",
+                      "inverse-surface": "#e1e2ed",
+                      "on-tertiary": "#2f3037",
+                      "on-secondary-fixed-variant": "#454749",
+                      "on-primary-container": "#eeefff",
+                      "outline-variant": "#424655",
+                      "inverse-on-surface": "#2e3039",
+                      "secondary-container": "#454749",
+                      "tertiary-fixed": "#e2e1eb",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-container-highest": "#32343d",
+                      "inverse-primary": "#0054d8",
+                      "on-secondary-fixed": "#1a1c1d",
+                      "on-surface-variant": "#c3c6d7",
+                      "secondary-fixed-dim": "#c6c6c8",
+                      "on-surface": "#e1e2ed",
+                      "tertiary": "#c6c6cf",
+                      "surface-container-lowest": "#0c0e16",
+                      "surface-bright": "#373942",
+                      "outline": "#8d90a1",
+                      "tertiary-container": "#6c6d75",
+                      "tertiary-fixed-dim": "#c6c6cf",
+                      "on-secondary": "#2f3132",
+                      "on-primary": "#002a76",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed": "#1a1b22",
+                      "on-background": "#e1e2ed",
+                      "on-tertiary-container": "#f1f0fa",
+                      "surface-dim": "#11131b",
+                      "on-primary-fixed-variant": "#003fa5",
+                      "surface": "#11131b",
+                      "primary-container": "#1d63ed",
+                      "surface-variant": "#32343d",
+                      "on-secondary-container": "#b4b5b7",
+                      "on-error-container": "#ffdad6",
+                      "background": "#11131b",
+                      "surface-container": "#1d1f28",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "primary": "#b3c5ff",
+                      "surface-container-high": "#272a32",
+                      "surface-container-low": "#191b23",
+                      "surface-tint": "#b3c5ff",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "secondary": "#c6c6c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "content-gap": "48px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-tablet": "40px",
+                      "stack-sm": "8px",
+                      "margin-desktop": "80px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px"
+              },
+              "fontFamily": {
+                      "metadata": ["Geist"],
+                      "display": ["Geist"],
+                      "label": ["Geist"],
+                      "page-title-mobile": ["Geist"],
+                      "article-title-lg": ["Geist"],
+                      "article-title-mobile": ["Geist"],
+                      "page-title": ["Geist"],
+                      "article-title-sm": ["Geist"],
+                      "body-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "section-title": ["Geist"]
+              },
+              "fontSize": {
+                      "metadata": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "display": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                      "label": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "page-title-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "article-title-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "article-title-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "page-title": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "article-title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "section-title": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background dark:bg-background border-b border-outline-variant flat no shadows">
+<div class="font-display text-article-title-sm font-semibold text-primary dark:text-primary">
+            LaraNews
+        </div>
+<nav class="hidden md:flex gap-gutter items-center h-full">
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 transition-opacity flex items-center h-full" href="#">Home</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 transition-opacity flex items-center h-full" href="#">Topics</a>
+<!-- Active State: Discovery matches Search intent -->
+<a class="font-label text-label text-primary border-b-2 border-primary hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 transition-opacity flex items-center h-full mt-[2px]" href="#">Discovery</a>
+</nav>
+<div class="flex gap-stack-md items-center text-primary dark:text-primary">
+<button class="hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-[120px] px-margin-desktop mx-auto w-full max-w-[1440px] pb-section-gap">
+<!-- Search Hero -->
+<section class="mb-section-gap w-full max-w-[960px]">
+<div class="relative w-full mb-stack-lg group">
+<span class="material-symbols-outlined absolute left-0 bottom-[14px] text-on-surface-variant group-focus-within:text-primary transition-colors text-[32px]">search</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant pb-stack-sm pl-[48px] focus:ring-0 focus:border-primary font-page-title text-page-title text-on-background placeholder:text-on-surface-variant transition-colors outline-none h-[64px]" placeholder="Explore LaraNews..." type="text" value="Quantum Computing Advancements"/>
+</div>
+<!-- Filters (Chips) -->
+<div class="flex flex-wrap gap-stack-md mt-content-gap">
+<button class="px-6 py-2 bg-primary-container text-on-primary-container font-label text-label transition-colors tracking-wide">All Results</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label transition-colors tracking-wide">Articles</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label transition-colors tracking-wide">Posts</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label transition-colors tracking-wide">Users</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label transition-colors tracking-wide">Communities</button>
+</div>
+</section>
+<!-- Content Layout: Asymmetric Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-[80px]">
+<!-- Left Column: Search Results (Wider Lane) -->
+<div class="md:col-span-8 flex flex-col gap-content-gap">
+<h2 class="font-metadata text-metadata text-on-surface-variant uppercase tracking-widest border-b border-outline-variant pb-stack-sm w-max mb-stack-md">Showing 142 results</h2>
+<!-- Result Row 1 -->
+<article class="flex flex-col sm:flex-row gap-gutter group cursor-pointer border-b border-outline-variant pb-content-gap w-full md:w-[90%] border-r-0 border-l-0 border-t-0">
+<div class="w-full sm:w-[240px] flex-shrink-0 aspect-[4/3] sm:aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-in-out grayscale group-hover:grayscale-0" data-alt="A macro-level abstract visualization of a quantum computing chip in a sleek dark mode aesthetic. Geometric golden circuitry lines glow faintly against a deep, matte obsidian background. The composition is highly structured and minimalistic, conveying advanced technology and high-end scientific research in an editorial photography style with cool studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcoyR0aXRvAQGb-Cz1Y3No_9Zszj_oWdFqHxk_AAdzaZtodCtl1oFvjbvAKzmwNze5KKH0muMrEo1rgSpdurUcxSpWEqBPrPBEUcnFSoy8yFaCzomIU09ZPvsRpv-p-UKVN4oxuDmSkWtB59RcTYQNucxMWqkybOqu4yfYQwyZ5xor07gC9uc9omhYzQk9naDhUBZHEibhi71RaxU63r7crf3J6KJYu3TTt01l3V00ntrQ3UrhobmB"/>
+</div>
+<div class="flex-grow flex flex-col justify-start pt-stack-sm">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<span class="font-metadata text-metadata text-primary uppercase tracking-widest">Technology</span>
+<span class="w-[4px] h-[4px] rounded-full bg-outline-variant"></span>
+<span class="font-metadata text-metadata text-on-surface-variant">4 hrs ago</span>
+</div>
+<h3 class="font-article-title-lg text-article-title-lg text-on-background mb-stack-md group-hover:text-primary transition-colors leading-tight">IBM Announces Breakthrough in Quantum Error Correction</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">The latest developments in scalable quantum architecture suggest a viable path forward for mitigating decoherence, marking a significant milestone for computational physics and future cryptography protocols.</p>
+<div class="mt-auto pt-stack-md flex items-center gap-stack-sm text-on-surface-variant font-metadata text-metadata">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span> Save
+                        </div>
+</div>
+</article>
+<!-- Result Row 2 -->
+<article class="flex flex-col sm:flex-row gap-gutter group cursor-pointer border-b border-outline-variant pb-content-gap w-full md:w-[90%] border-r-0 border-l-0 border-t-0">
+<div class="w-full sm:w-[240px] flex-shrink-0 aspect-[4/3] sm:aspect-square relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-in-out grayscale group-hover:grayscale-0" data-alt="A conceptual rendering of global financial data flows presented in a dark, minimalist UI style. Thin, luminous blue and silver lines arc across a subtle, dark grid background representing a globe. The aesthetic is clean, intellectual, and sophisticated, avoiding bright colors in favor of tonal grays and deep navys to suggest serious economic journalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6p6Gpvv3j77XRPCSrX-LSgwsYT4EI9CMVwok8csv6ACVwqVtgWbXvzXSmX64XaUQqnL8pTrhhepHh-ElNSqT0U5mP2uM-6a8_XAD4vCQqSeHadc5RhGT6V5l5FXKRPGTtj9QJTkgtCysYcSH-RISgCS7JXBzvUfykAbquGelN1b6f5Zq6lWx7-4GCCPhEZQocW2r3YLNjEqLaL-zqERV_49hL5m7iuyePJULrmdn3AxbIb3nXATr-"/>
+</div>
+<div class="flex-grow flex flex-col justify-start pt-stack-sm">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<span class="font-metadata text-metadata text-primary uppercase tracking-widest">Markets</span>
+<span class="w-[4px] h-[4px] rounded-full bg-outline-variant"></span>
+<span class="font-metadata text-metadata text-on-surface-variant">Yesterday</span>
+</div>
+<h3 class="font-article-title-lg text-article-title-lg text-on-background mb-stack-md group-hover:text-primary transition-colors leading-tight">Global Markets React to Shifting Tech Valuations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">As emerging technologies require increasing capital investment, traditional valuation models are being heavily scrutinized by institutional investors across major indices.</p>
+<div class="mt-auto pt-stack-md flex items-center gap-stack-sm text-on-surface-variant font-metadata text-metadata">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span> Save
+                        </div>
+</div>
+</article>
+<!-- Result Row 3 (No Image, Text Only snippet) -->
+<article class="flex flex-col gap-gutter group cursor-pointer border-b border-outline-variant pb-content-gap w-full md:w-[90%] border-r-0 border-l-0 border-t-0">
+<div class="flex-grow flex flex-col justify-start pt-stack-sm">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<span class="font-metadata text-metadata text-primary uppercase tracking-widest">Community Post</span>
+<span class="w-[4px] h-[4px] rounded-full bg-outline-variant"></span>
+<span class="font-metadata text-metadata text-on-surface-variant">by @DrElaraVance</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-background mb-stack-sm group-hover:text-primary transition-colors leading-tight">Discussion: Practical applications of NISQ-era hardware in logistics.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">I've been reviewing the recent papers on supply chain optimization using noisy intermediate-scale quantum devices. The theoretical bounds are promising, but the actual implementation...</p>
+<div class="mt-stack-md flex items-center gap-gutter text-on-surface-variant font-metadata text-metadata">
+<span class="flex items-center gap-[4px]"><span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span> 24</span>
+<span class="flex items-center gap-[4px]"><span class="material-symbols-outlined text-[16px]">favorite_border</span> 112</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Context & Metadata (Narrower Lane) -->
+<aside class="md:col-span-4 flex flex-col gap-section-gap md:sticky md:top-[120px] h-fit">
+<!-- Recent Searches -->
+<div>
+<h4 class="font-section-title text-section-title text-on-background mb-stack-lg flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-outline">history</span> Recent
+                    </h4>
+<ul class="flex flex-col font-body-md text-body-md text-on-surface-variant">
+<li class="py-stack-sm border-b border-outline-variant w-[80%] hover:text-primary cursor-pointer transition-colors flex justify-between items-center group">
+                            European AI Act
+                            <span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</li>
+<li class="py-stack-sm border-b border-outline-variant w-[80%] hover:text-primary cursor-pointer transition-colors flex justify-between items-center group">
+                            Semiconductor Supply Chain
+                            <span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</li>
+<li class="py-stack-sm border-b border-outline-variant w-[80%] hover:text-primary cursor-pointer transition-colors flex justify-between items-center group">
+                            AGI Timelines
+                            <span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</li>
+</ul>
+</div>
+<!-- Trending Topics -->
+<div>
+<h4 class="font-section-title text-section-title text-on-background mb-stack-lg flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-outline">trending_up</span> Trending
+                    </h4>
+<div class="flex flex-wrap gap-stack-sm">
+<span class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-metadata text-metadata cursor-pointer transition-colors">#Biotech</span>
+<span class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-metadata text-metadata cursor-pointer transition-colors">#FedRates</span>
+<span class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-metadata text-metadata cursor-pointer transition-colors">#SpaceX</span>
+<span class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-metadata text-metadata cursor-pointer transition-colors">#Renewables</span>
+<span class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-metadata text-metadata cursor-pointer transition-colors">#EVMarket</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

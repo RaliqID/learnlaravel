@@ -1,0 +1,264 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Private Messaging</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #27272A;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-screen flex flex-col overflow-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background border-b border-outline-variant">
+<div class="flex items-center gap-stack-lg">
+<span class="font-display text-article-title-sm font-semibold text-primary">LaraNews</span>
+<div class="hidden md:flex items-center gap-stack-md ml-gutter">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Topics</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label text-label cursor-pointer active:opacity-70" href="#">Discovery</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary transition-all duration-200" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary transition-all duration-200" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary transition-all duration-200" data-icon="person">person</span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex mt-16 overflow-hidden max-w-[1440px] mx-auto w-full">
+<!-- Left Pane: Conversations List -->
+<aside class="w-full md:w-[360px] flex-shrink-0 border-r border-outline-variant bg-surface-container-lowest flex flex-col h-full overflow-hidden">
+<div class="p-stack-md border-b border-outline-variant flex justify-between items-center">
+<h2 class="font-section-title text-section-title text-on-surface">Messages</h2>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-icon="edit_square">edit_square</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Conversation Item 1 (Active) -->
+<div class="p-stack-md border-b border-outline-variant bg-surface-container cursor-pointer transition-colors flex gap-stack-md items-start">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A striking portrait of a journalist in a dimly lit, high-end editorial office. The scene features deep shadows, moody rim lighting, and a sophisticated palette of dark charcoals and subtle blues. The aesthetic is modern, serious, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw7XIw_AeDNJViWZjETX6QoiUGSFBEjKv1Wupg82dlf02EGaPHho0y-v-CXaztjsdtHRKzMKjHfMk2hxyUfu0BbovjU7RPhc0My9y2pL_I3c4vzugFmLS2wHtnp2xc0nLW2ErNuM5fczhjJ60ce3tYjvrpWPMgaViEOGtiEq6__AItyuGjgwuc9-cvbyDmE69OSMwKosauG64YBKbCjZWRPd_9EbFOOX4FVaAK8wzoZrWWWAknZ82L">
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-label text-label text-primary truncate">Elena Rostova</h3>
+<span class="font-metadata text-metadata text-on-surface-variant">10:42 AM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface truncate">The draft for the climate tech piece is ready for your review. Let me know what you think about the pacing.</p>
+</div>
+</div>
+<!-- Conversation Item 2 -->
+<div class="p-stack-md border-b border-outline-variant hover:bg-surface-container-low cursor-pointer transition-colors flex gap-stack-md items-start">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of an older, distinguished editor reviewing documents in a sleek, minimalist newsroom. High contrast lighting emphasizes the texture of his suit and the serious nature of the environment. The color palette revolves around cool grays, deep blacks, and muted whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtQP4d5SvL_uHnsvhjuzquyznekXnAdnygf-C_3P15v-czNpw_kBl7_du581MfUh0yY_diFAcjf9S7_nz2EcGz23oCrFlQjq0xQXlg5zFrlErMMhEb_YUWzLOxYQUr4vTyEQMc-lYmuHZjoD8y4hBg8rKQai1v50RLQj6ft9FdZy_18bKgEQUynynzbfhOrtAGRgUpgudmZUqH0H4XzZDCQSxaqQEzAHNfpqr2VLFenw87q3oommXx">
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-label text-label text-on-surface truncate">Marcus Vance</h3>
+<span class="font-metadata text-metadata text-on-surface-variant">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">We need to push the publication time back by two hours to verify those last sources.</p>
+</div>
+</div>
+<!-- Conversation Item 3 -->
+<div class="p-stack-md border-b border-outline-variant hover:bg-surface-container-low cursor-pointer transition-colors flex gap-stack-md items-start">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="group">group</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-label text-label text-on-surface truncate">Community Trends</h3>
+<span class="font-metadata text-metadata text-on-surface-variant">Tuesday</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate"><span class="text-on-surface">Sarah:</span> The latest data shows a 15% increase in reader engagement for local tech stories.</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Pane: Active Chat -->
+<section class="hidden md:flex flex-1 flex-col bg-background h-full overflow-hidden relative">
+<!-- Chat Header -->
+<header class="p-stack-md border-b border-outline-variant bg-surface flex items-center justify-between flex-shrink-0">
+<div class="flex items-center gap-stack-md">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A striking portrait of a journalist in a dimly lit, high-end editorial office. The scene features deep shadows, moody rim lighting, and a sophisticated palette of dark charcoals and subtle blues. The aesthetic is modern, serious, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Edu1nkD0cLxJ_hWL7-VBxlmSYXCOrtMyIZ5WPfDpAJdt2ds8eVcrk0g91ENrBFIRqx5_eGaO5WX6AOKzbNzrKRUMaawKMVJrtAFn14ld3d-8_ueRc-yH-lypgKA6VMcYjtQJibzK4KFeO4qlY8fnnpj12gDlNr-8j9B0HRJNCbq2arw5VYcz67QnwNoL1HU1sX9i-QLHfcrEv8YtbfJp1QicflU150N7Ys6VrqAUTekCB3H3XgGO">
+<div>
+<h2 class="font-section-title text-article-title-sm text-on-surface">Elena Rostova</h2>
+<span class="font-metadata text-metadata text-primary">Senior Correspondent</span>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="search">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</header>
+<!-- Chat Messages Area -->
+<div class="flex-1 overflow-y-auto p-gutter flex flex-col gap-stack-lg">
+<!-- Date Separator -->
+<div class="flex justify-center my-stack-sm">
+<span class="font-metadata text-metadata text-on-surface-variant px-stack-md py-1 bg-surface-container-low">Today</span>
+</div>
+<!-- Received Message -->
+<div class="flex gap-stack-md max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" data-alt="A striking portrait of a journalist in a dimly lit, high-end editorial office. The scene features deep shadows, moody rim lighting, and a sophisticated palette of dark charcoals and subtle blues. The aesthetic is modern, serious, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJEXmS-I7HpJfpEDKeDwpLCORycxBrXK7J94t9wTKyOOT4tZ_47zqoIbcgR_3SawEK6mO6vQ7VccAxoDgqZqL8AAi8Kk4AaYWSZAVqRRyodlTKXxECKaJnnoVbmsbEk4wme1Lf_vDx2pxgg6-IDNSxNLIthC6sz-CNWLmJF_tU1FXt3hHK5aqK3qRbokBupR6Gdp04Ec0RsJkpLuRpibI2f-E_Hk6pWoM-KK8tuvuVK4Zc14osfXA">
+<div>
+<div class="bg-surface-container-low text-on-surface p-stack-md font-body-md text-body-md rounded-r-lg rounded-bl-lg">Hi, I've finished the initial draft for the climate tech piece. I've integrated the community feedback regarding local economic impacts as we discussed.</div>
+<span class="font-metadata text-metadata text-on-surface-variant mt-1 block">10:15 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex gap-stack-md max-w-[80%] ml-auto justify-end">
+<div class="flex flex-col items-end">
+<div class="bg-surface-container text-on-surface border border-outline-variant p-stack-md font-body-md text-body-md rounded-l-lg rounded-tr-lg">That sounds perfect. Aligning the tech breakthroughs with community economic trends is exactly what our readers are asking for. Please send the draft link.</div>
+<span class="font-metadata text-metadata text-on-surface-variant mt-1 block">10:30 AM</span>
+</div>
+</div>
+<!-- Received Message (Current snippet) -->
+<div class="flex gap-stack-md max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" data-alt="A striking portrait of a journalist in a dimly lit, high-end editorial office. The scene features deep shadows, moody rim lighting, and a sophisticated palette of dark charcoals and subtle blues. The aesthetic is modern, serious, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVMU5TFDRrLE0HVcX-lvnn1BKJPyw9GcgeALd7w_K8sqctJxw8HFnlEk7z1XqXksxapk3OM-Ga7taq4oNMBeFfZ8fzP7fGt3CsTaCWwS7-D6sxi6eR1fDG3jRBeXDvLaEQisAqFFD-O3Qe5O6oh-DM_SAWwrPEyGK9B3Sp3iyBKvNOAPUlV6WT8L0fiPGqWSAzeAlKgfnAa3MiX3Ia5eh6NUz5g7NUBY5MNZJPsSbXpYzVIEbYNbJZ">
+<div>
+<div class="bg-surface-container-low text-on-surface p-stack-md font-body-md text-body-md rounded-r-lg rounded-bl-lg">
+                            The draft for the climate tech piece is ready for your review. Let me know what you think about the pacing.
+                        </div>
+<!-- Attached File Preview -->
+<div class="mt-stack-sm flex items-center gap-stack-sm p-stack-sm bg-surface border border-outline-variant cursor-pointer hover:bg-surface-container-highest transition-colors w-fit">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+<div>
+<span class="font-label text-label text-on-surface block">climate_tech_draft_v2.docx</span>
+<span class="font-metadata text-metadata text-on-surface-variant">24 KB</span>
+</div>
+</div>
+<span class="font-metadata text-metadata text-on-surface-variant mt-1 block">10:42 AM</span>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-gutter border-t border-outline-variant bg-background flex-shrink-0">
+<div class="flex items-end gap-stack-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors p-2" data-icon="attach_file">attach_file</button>
+<div class="flex-1 relative">
+<!-- Pseudo-input for styling, relies on minimal bottom border -->
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 resize-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant py-2 min-h-[40px] max-h-[120px] overflow-y-auto custom-scrollbar transition-colors" placeholder="Type a message..." rows="1"></textarea>
+</div>
+<button class="bg-primary text-on-primary-fixed font-label text-label px-stack-md py-2 flex items-center gap-2 hover:opacity-90 transition-opacity uppercase tracking-wider">
+                        Send
+                        <span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+<div class="mt-2 text-right">
+<span class="font-metadata text-metadata text-on-surface-variant">Press Enter to send, Shift+Enter for new line</span>
+</div>
+</div>
+</section>
+</main>
+
+
+</body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Bookmarks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "inverse-surface": "#e1e2ed",
+                        "on-tertiary": "#2f3037",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#424655",
+                        "inverse-on-surface": "#2e3039",
+                        "secondary-container": "#454749",
+                        "tertiary-fixed": "#e2e1eb",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#32343d",
+                        "inverse-primary": "#0054d8",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-surface-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "on-surface": "#e1e2ed",
+                        "tertiary": "#c6c6cf",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-bright": "#373942",
+                        "outline": "#8d90a1",
+                        "tertiary-container": "#6c6d75",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-secondary": "#2f3132",
+                        "on-primary": "#002a76",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-dim": "#11131b",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface": "#11131b",
+                        "primary-container": "#1d63ed",
+                        "surface-variant": "#32343d",
+                        "on-secondary-container": "#b4b5b7",
+                        "on-error-container": "#ffdad6",
+                        "background": "#11131b",
+                        "surface-container": "#1d1f28",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "surface-container-high": "#272a32",
+                        "surface-container-low": "#191b23",
+                        "surface-tint": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "secondary": "#c6c6c8"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "content-gap": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    fontFamily: {
+                        "metadata": ["Geist"],
+                        "display": ["Geist"],
+                        "label": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    fontSize: {
+                        "metadata": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "display": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+                        "page-title-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "article-title-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "article-title-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "page-title": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "500" }],
+                        "article-title-sm": ["20px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "400" }],
+                        "section-title": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0A0A0B; color: #e1e2ed; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #b3c5ff; transition: width 0.2s ease-in-out; }
+        .nav-link:hover::after { width: 100%; }
+        
+        .tab-active { color: #e1e2ed; border-bottom: 2px solid #b3c5ff; }
+        .tab-inactive { color: #8d90a1; border-bottom: 1px solid #424655; }
+        .tab-inactive:hover { color: #c3c6d7; border-bottom-color: #c3c6d7; }
+        
+        .bookmark-row { border-bottom: 1px solid #27272A; transition: background-color 0.2s; }
+        .bookmark-row:hover { background-color: #141416; }
+        .bookmark-row:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-16">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-background dark:bg-background border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-gutter">
+<span class="font-display text-article-title-sm font-semibold text-primary dark:text-primary">LaraNews</span>
+<div class="hidden md:flex gap-stack-lg">
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70 nav-link" href="#">Home</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70 nav-link" href="#">Topics</a>
+<a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer active:opacity-70 nav-link" href="#">Discovery</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden md:flex items-center gap-2 border-b border-outline-variant pb-1 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline w-48 p-0" placeholder="Search..." type="text">
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-all duration-200 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-content-gap">
+<header class="mb-content-gap text-center md:text-left">
+<h1 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface mb-stack-sm">Saved</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Your personal collection of articles, insights, and stories.</p>
+</header>
+<section class="max-w-4xl">
+<!-- Tabs -->
+<div class="flex w-full mb-stack-lg">
+<button class="flex-1 pb-stack-sm font-label text-label tab-active transition-all cursor-pointer text-center">
+                    Articles
+                </button>
+<button class="flex-1 pb-stack-sm font-label text-label tab-inactive transition-all cursor-pointer text-center">
+                    Posts
+                </button>
+</div>
+<!-- List Container -->
+<div class="flex flex-col">
+<!-- Item 1 -->
+<article class="bookmark-row py-stack-lg flex flex-col md:flex-row gap-stack-lg items-start md:items-center">
+<div class="w-full md:w-48 h-32 md:h-24 flex-shrink-0 bg-surface-container-low rounded overflow-hidden">
+<div class="bg-cover bg-center w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9MWnzInFuhe8GML4Rr1842goM5h-8XewMu0oyW9YzYpL29WLxMImjVEdilJPWSxhzG9R6tSDlB2jMHuhJpBUq-GLF98_VNMfO7A6bfrggFsks5otXssMtx7Xt3GSdv47koAPgp0z8_bxTrQ1iPjeI9kGqWKr8lBqgR9dJozuV49O9WIyJ26aZzhxiT7-ZP_mbmH7uehncNVZhLgp8CWcLUt6hGj-T8XsrO_vGibdhK-RFg2zGK2P3')"></div>
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[96px]">
+<div>
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="bg-surface-container-high text-on-surface px-2 py-1 font-metadata text-metadata rounded-sm">Architecture</span>
+<span class="font-metadata text-metadata text-outline">•</span>
+<span class="font-metadata text-metadata text-outline">Oct 12, 2023</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm hover:text-primary cursor-pointer transition-colors line-clamp-2">The New Geometry of Urban Living Spaces</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Exploring how minimalist design principles are reshaping modern metropolitan apartments.</p>
+</div>
+<div class="flex justify-between items-center mt-stack-md">
+<span class="font-metadata text-metadata text-on-surface-variant">By Elena Rostova</span>
+<div class="flex gap-stack-sm">
+<button aria-label="Share" class="text-outline hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="Remove bookmark" class="text-primary hover:text-inverse-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 2 -->
+<article class="bookmark-row py-stack-lg flex flex-col md:flex-row gap-stack-lg items-start md:items-center">
+<div class="w-full md:w-48 h-32 md:h-24 flex-shrink-0 bg-surface-container-low rounded overflow-hidden">
+<div class="bg-cover bg-center w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" data-alt="A macro photograph of an advanced silicon microchip glowing softly with faint blue light trails, resting on a matte black surface. The lighting is cinematic, highlighting the intricate metallic traces. The color palette is dominated by dark tones with sharp, luminous azure accents. The mood implies high intelligence and cutting-edge technology." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLj8sd-kXMifgJPTW9SJq3njVDUKjmDjGhmAf6-zCkz0jV3CsFMypv8bnn8d9l17oB8yQuPrvN5V0IrM2rhHqRnNu3ePs9P-W1NmFpFk_EjBhji1HMWyijdhpPumR0tYRJPhT8wlNvK_z1GXGl9DwIlhdNjLtOibvhK57bcyrbRNPnUWvJ_jqjNa99lYNVjR7QB0cNZPYDsKOZqkUG-SvIXbF2Rr7m3oteUn1JJ4U7ttqmigEpTKgf')"></div>
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[96px]">
+<div>
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="bg-surface-container-high text-on-surface px-2 py-1 font-metadata text-metadata rounded-sm">Technology</span>
+<span class="font-metadata text-metadata text-outline">•</span>
+<span class="font-metadata text-metadata text-outline">Oct 10, 2023</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm hover:text-primary cursor-pointer transition-colors line-clamp-2">Silicon Silence: The Next Leap in Processing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Why reducing thermal noise is the crucial barrier for quantum computing.</p>
+</div>
+<div class="flex justify-between items-center mt-stack-md">
+<span class="font-metadata text-metadata text-on-surface-variant">By Marcus Vance</span>
+<div class="flex gap-stack-sm">
+<button aria-label="Share" class="text-outline hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="Remove bookmark" class="text-primary hover:text-inverse-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="bookmark-row py-stack-lg flex flex-col md:flex-row gap-stack-lg items-start md:items-center">
+<div class="w-full md:w-48 h-32 md:h-24 flex-shrink-0 bg-surface-container-low rounded overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[32px]">article</span>
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[96px]">
+<div>
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="bg-surface-container-high text-on-surface px-2 py-1 font-metadata text-metadata rounded-sm">Editorial</span>
+<span class="font-metadata text-metadata text-outline">•</span>
+<span class="font-metadata text-metadata text-outline">Sep 28, 2023</span>
+</div>
+<h3 class="font-article-title-sm text-article-title-sm text-on-surface mb-stack-sm hover:text-primary cursor-pointer transition-colors line-clamp-2">The Aesthetics of Information Density</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Striking the balance between presenting raw data and maintaining readability in digital media.</p>
+</div>
+<div class="flex justify-between items-center mt-stack-md">
+<span class="font-metadata text-metadata text-on-surface-variant">By Elena Rostova</span>
+<div class="flex gap-stack-sm">
+<button aria-label="Share" class="text-outline hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="Remove bookmark" class="text-primary hover:text-inverse-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-stack-lg text-center">
+<button class="font-label text-label text-on-surface-variant hover:text-on-surface border border-outline-variant px-6 py-2 transition-colors">
+                    Load More
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop mt-section-gap flex flex-col md:flex-row justify-between items-center bg-background dark:bg-background border-t border-outline-variant flat no shadows">
+<div class="flex flex-col md:flex-row items-center gap-stack-md md:gap-gutter mb-stack-md md:mb-0">
+<span class="font-display text-label text-on-surface">LaraNews</span>
+<span class="font-metadata text-metadata text-on-surface-variant hidden md:inline">|</span>
+<span class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant">© 2024 LaraNews Editorial. All rights reserved.</span>
+</div>
+<div class="flex flex-wrap justify-center gap-stack-md md:gap-gutter">
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Terms</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant hover:text-primary transition-colors opacity-100 hover:opacity-80" href="#">Archive</a>
+</div>
+</footer>
+
+
+</body></html>

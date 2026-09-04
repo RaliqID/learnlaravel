@@ -1,0 +1,194 @@
+﻿/* ============================================================
+   LARANEWS — GLOBAL BASE (Stitch dark editorial)
+   Body, selection, scrollbars, focus rings, reduced motion.
+   ============================================================ */
+
+@layer base {
+  * {
+    border-color: var(--color-outline-variant);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+    color: var(--color-on-background);
+    background-color: var(--color-background);
+  }
+
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    border-radius: 0;
+  }
+
+  /* Visible focus ring — brand accent, WCAG visible. */
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-none);
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-container-highest);
+    border: 2px solid var(--color-background);
+  }
+
+  /* Respect reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* --- Auth: editorial visual panel / backdrop (no external imagery) --- */
+  .auth-backdrop {
+    background-color: var(--color-surface-container-lowest);
+    background-image:
+      radial-gradient(110% 75% at 12% 0%, rgba(179, 197, 255, 0.13), transparent 55%),
+      radial-gradient(90% 65% at 100% 100%, rgba(29, 99, 237, 0.14), transparent 60%);
+  }
+  .auth-page-bg {
+    background-image:
+      radial-gradient(70% 50% at 50% -10%, rgba(179, 197, 255, 0.10), transparent 60%),
+      radial-gradient(60% 45% at 100% 110%, rgba(29, 99, 237, 0.08), transparent 60%);
+  }
+  .auth-texture {
+    background-image: radial-gradient(rgba(225, 226, 237, 0.07) 1px, transparent 1.5px);
+    background-size: 24px 24px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  }
+
+  .prose-article h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: var(--text-2xl);
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-on-background);
+  }
+
+  .prose-article p {
+    margin-top: 1rem;
+    color: var(--color-on-surface-variant);
+  }
+
+  .prose-article blockquote {
+    margin-block: 2.5rem;
+    border-left: 2px solid var(--color-primary);
+    padding-left: 1.5rem;
+    color: var(--color-on-surface-variant);
+    font-size: var(--text-xl);
+    line-height: 1.55;
+  }
+
+  .prose-article a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Reading progress line. */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    z-index: var(--z-fixed);
+    transition: width 80ms linear;
+  }
+
+  /* --- Create Post: drag-drop, tabs, transitions --- */
+  .image-drop-zone.drag-over {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface-container);
+    transform: scale(1.01);
+  }
+
+  .post-type-tab {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .post-type-tab.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .section-enter {
+    opacity: 0;
+    animation: fadeIn 200ms ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Error state for inputs */
+  input.border-error,
+  textarea.border-error,
+  select.border-error {
+    border-color: var(--color-error) !important;
+  }
+
+  input.border-error:focus,
+  textarea.border-error:focus,
+  select.border-error:focus {
+    border-color: var(--color-error) !important;
+  }
+}

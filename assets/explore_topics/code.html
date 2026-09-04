@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Topics</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#2e3039",
+                        "surface-dim": "#11131b",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "on-primary-fixed": "#00184a",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "background": "#11131b",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "on-secondary": "#2f3132",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "secondary": "#c6c6c8",
+                        "primary": "#b3c5ff",
+                        "on-secondary-container": "#b4b5b7",
+                        "secondary-container": "#454749",
+                        "on-error": "#690005",
+                        "primary-container": "#1d63ed",
+                        "surface": "#11131b",
+                        "surface-container-highest": "#32343d",
+                        "on-surface": "#e1e2ed",
+                        "on-primary": "#002a76",
+                        "on-background": "#e1e2ed",
+                        "outline-variant": "#424655",
+                        "inverse-surface": "#e1e2ed",
+                        "tertiary-container": "#6c6d75",
+                        "on-surface-variant": "#c3c6d7",
+                        "surface-bright": "#373942",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary": "#2f3037",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface-variant": "#32343d",
+                        "secondary-fixed": "#e2e2e4",
+                        "on-secondary-fixed-variant": "#454749",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-tertiary-container": "#f1f0fa",
+                        "surface-container": "#1d1f28",
+                        "error": "#ffb4ab",
+                        "outline": "#8d90a1",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#b3c5ff",
+                        "inverse-primary": "#0054d8",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "surface-container-low": "#191b23",
+                        "tertiary-fixed": "#e2e1eb",
+                        "tertiary": "#c6c6cf",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#272a32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-tablet": "40px",
+                        "stack-sm": "8px",
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "content-gap": "48px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "article-title-mobile": ["Geist"],
+                        "label": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "page-title": ["Geist"],
+                        "body-md": ["Geist"],
+                        "page-title-mobile": ["Geist"],
+                        "metadata": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "display": ["Geist"],
+                        "section-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+        body { font-family: 'Geist', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50 sticky">
+<div class="max-w-desktop mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-8">
+<a class="font-page-title-mobile text-page-title-mobile font-bold text-on-background dark:text-on-background tracking-tight" href="#">LaraNews</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer transition-opacity active:opacity-80" href="#">Home</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer transition-opacity active:opacity-80" href="#">Topics</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="text-on-background hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Notifications" class="text-on-background hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Profile" class="text-on-background hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-desktop mx-auto w-full px-margin-mobile md:px-margin-desktop py-content-gap flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32">
+<h1 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title mb-8">Explore topics</h1>
+<ul class="flex flex-col">
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-primary font-bold flex justify-between items-center group" href="#">
+                            Technology
+                            <span class="material-symbols-outlined opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Business
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Crypto
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Science
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            World
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Culture
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Design
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+<li class="border-b border-outline-variant last:border-0">
+<a class="block py-4 font-article-title-sm text-article-title-sm text-on-surface-variant hover:text-on-surface transition-colors duration-300 flex justify-between items-center group" href="#">
+                            Gaming
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Topic Content -->
+<section class="flex-grow md:pl-gutter pt-8 md:pt-0">
+<h2 class="font-section-title text-section-title mb-8 pb-4 border-b border-outline-variant">Latest in Technology</h2>
+<div class="flex flex-col gap-8">
+<!-- Article Item -->
+<article class="flex flex-col md:flex-row gap-6 group cursor-pointer"><div class="w-full md:w-1/3 aspect-[4/3] bg-surface-container overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" data-alt="A macro shot of a highly sophisticated quantum computing processor chip." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAdULhziN_WakFrEzeawQVPr3waMGKBYzPqFB8xka0A3R-VnZjO45ktpns_WT_9VZnGgFGjrxifso5_wuJm_qg4Gz3ByUp7lI531cm_X0UomU24BT5yUqKoW1bLTVUxveEKexWXy_vL2RiRscO2zem9Y7K4SLPLcms4hHLrk7HGkKbtqDx5Dl2izo0rZcEd9a6TiHhx4dWk6OXkjjmVAdLiNFsR5WncTgmn5jzJ6i9xhdtS5-xGU0d"></div><div class="w-full md:w-2/3 flex flex-col justify-center"><div class="font-metadata text-metadata text-on-surface-variant mb-2">Technology • Elena Rostova • 2 hours ago</div><h3 class="font-article-title-lg text-article-title-mobile md:text-article-title-lg mb-4 group-hover:text-primary transition-colors duration-300">The Next Generation of Quantum Processors Reaches Crucial Milestone</h3><p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Researchers have successfully stabilized qubits for a record-breaking duration, paving the way for commercially viable quantum computers that could revolutionize cryptography and complex system modeling.</p></div></article>
+<hr class="border-outline-variant">
+<!-- Article Item -->
+<article class="flex flex-col md:flex-row gap-6 group cursor-pointer"><div class="w-full md:w-1/3 aspect-[4/3] bg-surface-container overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" data-alt="Abstract visualization of distributed computing nodes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGc7seTFg5WcE8BauR2nJ-teJ-LOtZnznKkkHGvc9VyBxqqdkv8Q7scRjTANRM_Pr6tKTxJtpigyK0Yfa1K4kS9l_XBxvMlpnI6bCoD32IKxto7nduWnXWXTwrqnNgrG_ar9aJvLUeX5FDEw4JJVUo9rEVws8cXsrrm18k0gcy4bEYn8Kd8bZWOSvrL_2UqVgUUS_FHzIEGBeGA5Pq3on6NbMIe3LJpz3s2Ku9chenjXsDGLu7-9KQ"></div><div class="w-full md:w-2/3 flex flex-col justify-center"><div class="font-metadata text-metadata text-on-surface-variant mb-2">Software Engineering • Marcus Thorne • 5 hours ago</div><h3 class="font-article-title-lg text-article-title-mobile md:text-article-title-lg mb-4 group-hover:text-primary transition-colors duration-300">Scaling Asynchronous Systems for Global Infrastructure</h3><p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Exploring the architectural shifts required to maintain low latency and high availability in modern distributed environments through event-driven design patterns.</p></div></article>
+<hr class="border-outline-variant">
+<!-- Article Item -->
+<article class="flex flex-col md:flex-row gap-6 group cursor-pointer">
+<div class="w-full md:w-1/3 aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" data-alt="Abstract visualization of an artificial intelligence neural network. Clean, glowing white and blue nodes connect via sharp, geometric lines in a vast, dark void. The composition is highly structured and asymmetric, reflecting a premium editorial style focused on modern data structures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUD54A5aftSemK-C1wPXNIlAraeX8_Uq654icHUSoAS8MnmruBCx3rrNFEG470CFwupZdiJhfv3ewL65kiv4Nf_jGS7yp0Ik8yAXs5iIQbyPvaNEJgUxGEG6L22v_-moztcmJLafx1qXF2eedqcV0PphojteX8CRxEIiisrZjXE0BYl2Gl-2iFM3u9hMq6SBvNVC6xTcnGRd1kaC1tebnKmGBURzJqbtlgAzm3SBLb-4wqoNx4eCXH">
+</div>
+<div class="w-full md:w-2/3 flex flex-col justify-center">
+<div class="font-metadata text-metadata text-on-surface-variant mb-2">Artificial Intelligence • 1 day ago</div>
+<h3 class="font-article-title-lg text-article-title-mobile md:text-article-title-lg mb-4 group-hover:text-primary transition-colors duration-300">Smaller, More Efficient Language Models Challenge Industry Giants</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">A new wave of specialized, compact AI models is demonstrating that massive parameter counts aren't always necessary for high performance, offering more sustainable and accessible solutions for enterprise integration.</p>
+</div>
+</article>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="border border-outline-variant text-on-surface hover:bg-surface-container transition-colors duration-200 px-8 py-3 font-label text-label tracking-widest uppercase">Load More</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container w-full mt-section-gap border-t border-outline-variant dark:border-outline-variant">
+<div class="max-w-desktop mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-article-title-sm text-article-title-sm text-on-surface dark:text-on-surface font-bold tracking-tight">
+                LaraNews
+            </div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline hover:underline-offset-4 transition-all duration-300" href="#">About</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline hover:underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline hover:underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline hover:underline-offset-4 transition-all duration-300" href="#">Contact</a>
+<a class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline hover:underline-offset-4 transition-all duration-300" href="#">Newsletter</a>
+</nav>
+<div class="font-metadata text-metadata text-on-surface-variant dark:text-on-surface-variant">
+                © 2024 LaraNews. All rights reserved.
+            </div>
+</div>
+</footer>
+
+
+</body></html>

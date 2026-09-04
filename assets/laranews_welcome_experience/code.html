@@ -1,0 +1,335 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LaraNews - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+
+        /* Custom Animations */
+        @keyframes fadeUpScale {
+            0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(15px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .animate-logo {
+            animation: fadeUpScale 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        
+        .animate-title {
+            animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+        
+        .animate-desc {
+            animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+        
+        .animate-ctas {
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1.4s;
+            opacity: 0;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#f1f0fa",
+                        "outline-variant": "#424655",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "background": "#11131b",
+                        "on-primary-container": "#eeefff",
+                        "secondary-container": "#454749",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-fixed": "#e2e1eb",
+                        "secondary-fixed-dim": "#c6c6c8",
+                        "surface-tint": "#b3c5ff",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#b4b5b7",
+                        "tertiary": "#c6c6cf",
+                        "on-tertiary": "#2f3037",
+                        "surface-container-lowest": "#0c0e16",
+                        "on-background": "#e1e2ed",
+                        "secondary": "#c6c6c8",
+                        "inverse-on-surface": "#2e3039",
+                        "on-secondary-fixed": "#1a1c1d",
+                        "surface": "#11131b",
+                        "surface-container-highest": "#32343d",
+                        "surface-variant": "#32343d",
+                        "tertiary-container": "#6c6d75",
+                        "surface-dim": "#11131b",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#2f3132",
+                        "on-primary-fixed": "#00184a",
+                        "error-container": "#93000a",
+                        "primary": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "outline": "#8d90a1",
+                        "primary-container": "#1d63ed",
+                        "on-primary": "#002a76",
+                        "inverse-surface": "#e1e2ed",
+                        "on-surface": "#e1e2ed",
+                        "secondary-fixed": "#e2e2e4",
+                        "inverse-primary": "#0054d8",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-secondary-fixed-variant": "#454749",
+                        "surface-container-high": "#272a32",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "error": "#ffb4ab",
+                        "surface-container": "#1d1f28",
+                        "surface-bright": "#373942",
+                        "surface-container-low": "#191b23"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "stack-md": "16px",
+                        "margin-mobile": "20px",
+                        "margin-tablet": "40px",
+                        "section-gap": "120px",
+                        "margin-desktop": "80px",
+                        "content-gap": "48px"
+                    },
+                    "fontFamily": {
+                        "label": ["Geist"],
+                        "display": ["Geist"],
+                        "metadata": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "article-title-sm": ["Geist"],
+                        "body-md": ["Geist"],
+                        "article-title-mobile": ["Geist"],
+                        "article-title-lg": ["Geist"],
+                        "page-title": ["Geist"],
+                        "section-title": ["Geist"],
+                        "page-title-mobile": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "metadata": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "article-title-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "article-title-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "article-title-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "section-title": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "page-title-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen w-full overflow-hidden flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container relative">
+<!-- Background Shader Animation -->
+<!-- STITCH_SHADER_START:ANIMATION_8 class="absolute inset-0 w-full h-full z-0 opacity-40" -->
+<div class="absolute inset-0 w-full h-full z-0 opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_8" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_8');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+varying vec2 v_texCoord;
+
+// Simplex 2D noise
+vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
+float snoise(vec2 v){
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+           -0.577350269189626, 0.024390243902439);
+  vec2 i  = floor(v + dot(v, C.yy) );
+  vec2 x0 = v -   i + dot(i, C.xx);
+  vec2 i1;
+  i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+  + i.x + vec3(0.0, i1.x, 1.0 ));
+  vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy),
+    dot(x12.zw,x12.zw)), 0.0);
+  m = m*m ;
+  m = m*m ;
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 ox = floor(x + 0.5);
+  vec3 a0 = x - ox;
+  m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+  vec3 g;
+  g.x  = a0.x  * x0.x  + h.x  * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 aspect_uv = uv;
+    aspect_uv.x *= u_resolution.x / u_resolution.y;
+
+    // Background color: Deep charcoal/near-black
+    vec3 backgroundColor = vec3(0.05, 0.06, 0.09); // #0d0f17 roughly
+    
+    // Create flowing "light trails" using noise
+    float t = u_time * 0.05;
+    
+    // Base flow
+    float n = snoise(aspect_uv * 1.5 + vec2(t, t * 0.5));
+    n += 0.5 * snoise(aspect_uv * 3.0 - vec2(t * 1.2, t * 0.8));
+    
+    // Isolate thin lines
+    float lines = smoothstep(0.48, 0.5, n) - smoothstep(0.5, 0.52, n);
+    lines *= 0.15; // Keep it very subtle
+    
+    // Add blue accent color from logo (#1d63ed)
+    vec3 blueAccent = vec3(0.11, 0.39, 0.93);
+    
+    // Subtle glow based on mouse
+    vec2 mouse = u_mouse / u_resolution;
+    float dist = length(uv - mouse);
+    float mouseGlow = smoothstep(0.4, 0.0, dist) * 0.05;
+    
+    vec3 color = backgroundColor;
+    color += blueAccent * lines;
+    color += blueAccent * mouseGlow;
+    
+    // Add very soft particles
+    float particles = pow(fract(snoise(uv * 50.0 + t) * 100.0), 20.0) * 0.1;
+    color += particles * 0.2;
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_8 -->
+<!-- Main Content Container -->
+<main class="relative z-10 flex-grow flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-[1200px] mx-auto min-h-[100dvh]">
+<!-- Center Grouping -->
+<div class="flex flex-col items-center text-center max-w-[600px] w-full">
+<!-- Logo -->
+<div class="animate-logo mb-content-gap">
+<img alt="" class="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl opacity-90 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEWegoepgKyU6qzKxqhQ6x75PD-I1b91MF1A3BxgJ-CQFrOkdkbwiYM1jY7arqes-zcEnDqoytgr2_KIcXMI5A9lQ_PS8nvVBZ9KoX0EqaHZ4b9iXe8mIsmx10ZL1Nxgzsic5XKqYvCDeLrTpM2WCGhMAn_SSM2zVjcLS_jhMYKhCF45z1g-pB8Xc2BibhHO5nMqbT0FC6c1K39JCshTk7i1ZZ9tDGSWP_rY8pCfYej5rGIS2e9IOVZdN_uSafA-dBcA">
+</div>
+<!-- Typography Header -->
+<div class="animate-title flex flex-col items-center gap-stack-sm mb-stack-lg w-full">
+<h1 class="font-display text-display text-on-background tracking-tighter leading-tight drop-shadow-md">
+                    LaraNews
+                </h1>
+<h2 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface-variant max-w-lg mx-auto">
+                    Stay informed. Think deeper.
+                </h2>
+</div>
+<!-- Description -->
+<p class="animate-desc font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-content-gap opacity-80">
+                Discover important stories, explore perspectives, and join conversations that matter.
+            </p>
+<!-- Actions -->
+<div class="animate-ctas flex flex-col sm:flex-row items-center justify-center gap-stack-md w-full sm:w-auto px-margin-mobile sm:px-0">
+<a class="w-full sm:w-auto bg-primary text-on-primary font-label text-label py-3 px-8 rounded-none hover:bg-primary-fixed-dim transition-all duration-300 flex items-center justify-center gap-2 group border border-transparent shadow-[0_0_15px_rgba(179,197,255,0.15)] hover:shadow-[0_0_25px_rgba(179,197,255,0.25)]" href="#explore">
+                    Explore LaraNews
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto bg-transparent text-on-surface font-label text-label py-3 px-8 rounded-none border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-300 flex items-center justify-center" href="#signin">
+                    Sign in
+                </a>
+</div>
+</div>
+</main>
+</body></html>

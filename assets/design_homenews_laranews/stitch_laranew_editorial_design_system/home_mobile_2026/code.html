@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaraNews Home - 2026 Redesign</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#00184a",
+                        "on-secondary-fixed": "#191c22",
+                        "on-tertiary-fixed-variant": "#45474c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#002a76",
+                        "surface-container-lowest": "#0c0e11",
+                        "error-container": "#93000a",
+                        "outline-variant": "#424655",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "on-primary-container": "#eeefff",
+                        "secondary-fixed-dim": "#c4c6d0",
+                        "secondary-container": "#464951",
+                        "on-secondary-fixed-variant": "#44474e",
+                        "secondary": "#c4c6d0",
+                        "inverse-surface": "#e2e2e6",
+                        "on-surface": "#e2e2e6",
+                        "surface": "#111317",
+                        "surface-variant": "#333538",
+                        "tertiary-container": "#6c6d73",
+                        "tertiary": "#c6c6cd",
+                        "on-secondary": "#2d3038",
+                        "surface-container": "#1e2023",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#b3c5ff",
+                        "surface-container-highest": "#333538",
+                        "surface-container-high": "#282a2d",
+                        "inverse-primary": "#0054d8",
+                        "tertiary-fixed-dim": "#c6c6cd",
+                        "inverse-on-surface": "#2f3034",
+                        "primary-container": "#1d63ed",
+                        "on-tertiary": "#2e3036",
+                        "surface-dim": "#111317",
+                        "on-surface-variant": "#c3c6d7",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-tertiary-fixed": "#1a1b21",
+                        "surface-container-low": "#1a1c1f",
+                        "tertiary-fixed": "#e2e2e9",
+                        "on-secondary-container": "#b6b8c1",
+                        "on-tertiary-container": "#f0f0f7",
+                        "on-background": "#e2e2e6",
+                        "background": "#111317",
+                        "secondary-fixed": "#e0e2ec",
+                        "surface-bright": "#37393d",
+                        "outline": "#8d90a1",
+                        "primary-fixed": "#dbe1ff",
+                        "primary": "#b3c5ff",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "reading-width": "720px",
+                        "stack-md": "16px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "display-xl": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-400-normal.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-500-normal.woff2') format('woff2');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-600-normal.woff2') format('woff2');
+            font-weight: 600;
+        }
+        body { font-family: 'Geist', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col pt-12 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-xl docked full-width top-0 border-b border-outline-variant dark:border-outline-variant flat no shadows transition-all duration-200 ease-in-out fixed top-0 left-0 w-full z-50 flex items-center justify-between px-gutter h-12 max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-md">
+<button class="md:hidden text-on-surface-variant hover:text-on-surface transition-colors p-2 -ml-2 rounded-lg hover:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">LaraNews</span>
+</div>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary font-label-md text-label-md h-12 flex items-center" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors font-label-md text-label-md h-12 flex items-center" href="#">Topics</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors font-label-md text-label-md h-12 flex items-center" href="#">Discovery</a>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors p-2 rounded-lg hover:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hidden md:flex text-on-surface-variant hover:text-on-surface transition-colors p-2 rounded-lg hover:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="hidden md:flex text-on-surface-variant hover:text-on-surface transition-colors p-2 rounded-lg hover:bg-surface-variant/50">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-outline-variant ml-2">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional individual in a soft, low-light setting, reflecting a premium and subtle corporate aesthetic. Deep blacks and subtle blue highlights. High fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCe1WFyZr4TJD1MHC-wHTH0UDYn9hwvxIkCL1lF2eeL-9skBeMIFYCp2iDywMMbfNLQzr1q8GJqXDfXP_mgun7bsZXcKJejJ9CWkRDnxVlgLjHd8lzgXO0uu7N4H6X5bqMDLVaiwOEbZMCRqnDUHe5Lty1MswSkLsgYX4UxMrVnTXNhbLsZWB4geuQhi7b4nMEI5V_U0Ws5ZCP5teJrM-MlEUuH1iEQ4kk5oXwE1018dlu-U7TXcHY"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-gutter max-w-reading-width mx-auto pb-section-gap">
+<!-- Featured Article -->
+<article class="mt-stack-lg md:mt-section-gap flex flex-col gap-stack-md border-b border-outline-variant pb-stack-lg">
+<div class="w-full aspect-[4/3] md:aspect-[16/9] bg-surface-container rounded-xl overflow-hidden border border-outline-variant relative group">
+<img alt="Featured Article Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A striking, cinematic photograph of a complex quantum computer array bathed in cool, high-contrast blue and deep black lighting. The metallic components gleam with precision. The aesthetic is extremely high-end, minimalist corporate, and technically precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgx6GwYsDpOhmkZJhJx07ptbhlJz8nP3IyLhUVxnNaSTV9_p-TojDgdJh_URroJbR7sPiAc3RMlB2QvRyq31IObne-FIPqjtyGe2fJiMYORbef5vyAl4bIDlazxHHbDe2GiJvwUiIvFQUvaw114AJHkdsN19aJnJ2f5fg2K_DMvyLgn01efNgCt5Acm1OaloB3R3zNqzTA389SRXqxZUQQ0dFgAYTXaRp4sxiDX0SSc9MESyTSOFjO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute top-stack-sm left-stack-sm bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full border border-outline-variant">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Technology</span>
+</div>
+</div>
+<div class="flex flex-col gap-stack-sm mt-stack-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                    The Silent Architecture of Next-Gen Silicon Networks
+                </h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant line-clamp-3">
+                    As microprocessors approach sub-nanometer thresholds, entirely new paradigms in physical architecture are quietly reshaping the global supply chain, demanding unprecedented precision from foundries.
+                </p>
+<div class="flex items-center justify-between mt-stack-md">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">By Elena Rostova</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-sm text-label-sm text-outline">4 min read</span>
+</div>
+<button class="text-primary hover:text-on-primary-container transition-colors flex items-center gap-1">
+<span class="font-label-sm text-label-sm">Read</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Editorial Feed -->
+<div class="mt-stack-lg flex flex-col gap-stack-lg">
+<!-- Feed Item 1 -->
+<article class="flex flex-col gap-stack-md border-b border-outline-variant/50 pb-stack-lg">
+<div class="flex justify-between items-start gap-stack-md">
+<div class="flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Policy</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-sm text-label-sm text-outline">2 hrs ago</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+                            Data Sovereignty Accords Reach Critical Impasse in Geneva
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                            Negotiations stumble as major blocs clash over the exact definitions of localized storage constraints, threatening the unified framework.
+                        </p>
+</div>
+<div class="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="A minimalist, stark photo of an imposing brutalist government building at twilight. The sky is a deep, moody black, and the concrete structure is illuminated by sparse, cold white lights. High contrast, premium editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNAmi4ysdLQnP5jeSX6KvNURPhlfdt5reeVNv0ddAsAKdk6YetuQOXCYc1HtK2Cj9z8cExuqJ4VQkljkmm9I5IcmGUMHsnCc32UqqgLrZVExPrky5ki5I8QJC2qZ-KJ2lYzIXCY8_fdBk2LqAthMspWRJmn27XyiuQZsBaXsYZiorMLHqTsQt92UpHmVqXP4WItY9HljiKydkppn4tkRJmi5chgZO9vINn5Y2TRv4BrI-VO2g-Zs9a"/>
+</div>
+</div>
+</article>
+<!-- Feed Item 2 -->
+<article class="flex flex-col gap-stack-md border-b border-outline-variant/50 pb-stack-lg">
+<div class="flex justify-between items-start gap-stack-md">
+<div class="flex flex-col gap-stack-sm flex-grow">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Markets</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="font-label-sm text-label-sm text-outline">5 hrs ago</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+                            Algorithmic Drift: The Hidden Cost of High-Frequency Entropy
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                            Quant funds are increasingly grappling with model decay in environments where underlying market mechanics shift faster than training datasets.
+                        </p>
+</div>
+<div class="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="Abstract, high-resolution visual representation of market data streams. Sleek, thin lines of glowing blue and cool white intersecting against a pitch-black background. Minimalist corporate data visualization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx88KjcPutD9EXiJv2jxFhLPH4gGCZh2010e-feBExUOt1b-ZncAulYDfrmNs8h7AWxAeWaQo-fBFt1-CSlBJE-ysPfllCw4L_VgoCoDi0xIcdaGILYuLVoBF8mLR84UEAi7wYWxrfP7nx8askf3XvUlbGq9BWkyxWkLx9VWnAw2a8n8ShpWFB6GK7dNghwWLydTXpe8B-PX7j1z8iy5lorvPwlyacxh3y9aCy2pqyxKu3O3p9zgpS"/>
+</div>
+</div>
+</article>
+<!-- Load More -->
+<div class="flex justify-center mt-stack-md">
+<button class="border border-outline-variant hover:border-primary text-on-surface font-label-md text-label-md h-12 px-8 rounded-lg transition-colors flex items-center justify-center">
+                    Load More Intelligence
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface w-full py-section-gap border-t border-outline-variant dark:border-outline-variant flat no shadows mt-auto">
+<div class="w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">LaraNews</div>
+<div class="flex flex-wrap justify-center gap-stack-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Archive</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">© 2026 LaraNews Editorial Platform. All rights reserved.</div>
+</div>
+</footer>
+</body></html>
